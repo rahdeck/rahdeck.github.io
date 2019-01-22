@@ -1,0 +1,5 @@
+---
+title: "About This Website"
+---
+
+I've created this website to share the things I learn with a wider audience in hope that some of you may find it useful for your own understanding. Topics include math, programming, generative art and others.

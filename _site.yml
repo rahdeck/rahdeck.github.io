@@ -1,0 +1,9 @@
+name: "Radoslaw Majkut's personal website"
+output_dir: "."
+navbar:
+  title: "Rado's Website"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
