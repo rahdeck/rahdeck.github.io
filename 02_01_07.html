@@ -11,7 +11,7 @@
 
 
 
-<title>About This Website</title>
+<title>Exercise 2.1.7</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -296,19 +296,42 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">About This Website</h1>
+<h1 class="title toc-ignore">Exercise 2.1.7</h1>
 
 </div>
 
 
-<p>I created this website to share my solutions to exercises in <a href="https://www.amazon.com/Applied-Combinatorics-Fred-Roberts/dp/1420099825/">“Applied Combinatorics” 2nd Edition by Fred Roberts and Barry Tesman</a> with a wider audience in hope that some of you may find them useful for your own understanding.</p>
-<p>In the course of reading the book and solving the problems, I discovered a <a href="http://archive.dimacs.rutgers.edu/People/Staff/froberts/Exercises">website with solutions</a> (by the authors themselves) already exists. The solutions to the problems presented on my website are my own (and they contain explanations on how I arrived at a particular answer, which hopefully are more useful than rather terse answers on the authors’ website) but I have compared them with the answers provided in the authors’ website and corrected any answers I got wrong, whenever necessary.</p>
-<p>A few guarding statements on completeness and quality of the solutions:</p>
+<blockquote>
+<p>A musical band has to have at least one member. It can contain at most one drummer, at most one pianist, at most one bassist, at most one lead singer, and at most two background singers. How many possible bands are there if we consider any two drummers indistinguishable, and the same holds true for the other categories, and hence call two bands the same if they have the same number of members of each category? Justify your answer.</p>
+</blockquote>
+<p>There are a few methods to solve this problem but being compelled to use the product rule introduced in this chapter we can use the following reasoning: treat each of the four types of member who can appear at most once (drummer, pianist, bassist, lead singer) as 0 (not present) or 1 (present), thus having two possible values, and treat background singers as 0 (none present), 1 (one present) or 2 (two present), thus having 3 possible values and multiply them all. To get the final result remember to subtract one case where all values are 0 (we need at least one band member), giving rise to the following calculation:</p>
+<p><span class="math display">\[2 \cdot 2 \cdot 2 \cdot 2 \cdot 3 - 1 = 47\]</span></p>
+<p>We can verify the result above with an alternative (though much longer and painstaking) method of calculation using combinations (which are introduced a bit further in the book):</p>
 <ul>
-<li>This website is a work in progress - I’m publishing solutions as I’m making my way through the book, so the index of completed solutions is expected to change over time (having more and more solutions). As of yet there is no update notifications or a changelog so unfortunately you may have to revisit the site occasionally and see if the index of solutions has changed (alternatively you can check <a href="https://github.com/rahdeck/rahdeck.github.io/commits/master">git log of the repository</a> if you find it a better change tracking mechanism).</li>
-<li>I make no guarantees about the correctness of the solutions. In fact, it’s quite likely there are a whole bunch of wrong answers or incorrect reasoning even when the answer is correct. I appreciate any feedback and corrections you may have.</li>
+<li>A one-member band can be constructed in <span class="math inline">\(\binom{5}{1} = 5\)</span> ways (a single musician from each of 5 possible categories)</li>
+<li>A two-member band can be constructed in:
+<ul>
+<li><span class="math inline">\(\binom{5}{2} = 10\)</span> ways for two different musicians or</li>
+<li><span class="math inline">\(\binom{2}{2} = 1\)</span> way for two background singers</li>
+</ul></li>
+<li>A three-member band can be constructed in:
+<ul>
+<li><span class="math inline">\(\binom{5}{3} = 10\)</span> ways for three different musicians or</li>
+<li><span class="math inline">\(\binom{2}{2} \cdot \binom{4}{1} = 4\)</span> ways for two background singers and one other musician</li>
+</ul></li>
+<li>A four-member band can be constructed in:
+<ul>
+<li><span class="math inline">\(\binom{5}{4} = 5\)</span> ways for four different musicians or</li>
+<li><span class="math inline">\(\binom{2}{2} \cdot \binom{4}{2} = 6\)</span> for two background singers and two other musicians</li>
+</ul></li>
+<li>A five-member band can be constructed in:
+<ul>
+<li><span class="math inline">\(\binom{5}{5} = 1\)</span> way for five different musicians or</li>
+<li><span class="math inline">\(\binom{2}{2} \cdot \binom{4}{3} = 4\)</span> for two background singers and three other musicians</li>
+</ul></li>
+<li>A six-member band can be constructed in only 1 way (the largest allowed band make-up: one drummer, one pianist, one bassist, one lead singer and two background singers)</li>
 </ul>
-<p>Hope you enjoy this site and share the joy of the art of combinatorics!</p>
+<p>Adding all those numbers we independently get 47 as a result, which should give us more confidence that our first solution was correct and the approach was valid.</p>
 
 
 
