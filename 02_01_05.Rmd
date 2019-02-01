@@ -1,0 +1,26 @@
+---
+title: "Exercise 2.1.5"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> If we want to use bit strings of length at most _n_ to encode not only all 26 letters of the alphabet, but also all 10 decimal digits, what is the smallest number _n_ that works? 
+
+Since the question asks for bit strings of length _at most n_ (as opposed to exactly _n_), we can use bit strings ranging from 1 to _n_. That is, we want the smallest _n_ that satisfies the inequality (we exclude the 0-length string):
+
+$$2^1 + 2^2 + 2^3 + ... + 2^n >= 36$$
+
+The left hand side [sum of the powers of two](https://en.wikipedia.org/wiki/1_%2B_2_%2B_4_%2B_8_%2B_%E2%8B%AF) is equal to $2^{n+1} - 2$. Solving for _n_ we get:
+
+$$\lceil log_2 38 \rceil - 1 = `r n <- ceiling(log2(38)) - 1; n`$$
+
+If the question was to find bit strings of exactly length _n_, then the result would be: 
+
+$$\lceil log_2 36 \rceil = `r n <- ceiling(log2(36)); n`$$
+
+> What is _n_ for Morse code?
+
+[Wikipedia chart](https://en.wikipedia.org/wiki/Morse_code#/media/File:International_Morse_Code.svg) shows 5, as calculated above

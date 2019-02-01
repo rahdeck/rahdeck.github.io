@@ -2,4 +2,13 @@
 title: "About This Website"
 ---
 
-I've created this website to share the things I learn with a wider audience in hope that some of you may find it useful for your own understanding. Topics include math, programming, generative art and others.
+I created this website to share my solutions to exercises in ["Applied Combinatorics" 2nd Edition by Fred Roberts and Barry Tesman](https://www.amazon.com/Applied-Combinatorics-Fred-Roberts/dp/1420099825/) with a wider audience in hope that some of you may find them useful for your own understanding.
+
+In the course of reading the book and solving the problems, I discovered a [website with solutions](http://archive.dimacs.rutgers.edu/People/Staff/froberts/Exercises) (by the authors themselves) already exists. The solutions to the problems presented on my website are my own (and they contain explanations on how I arrived at a particular answer, which hopefully are more useful than rather terse answers on the authors' website) but I have compared them with the answers provided in the authors' website and corrected any answers I got wrong, whenever necessary.
+
+A few guarding statements on completeness and quality of the solutions:
+
+* This website is a work in progress - I'm publishing solutions as I'm making my way through the book, so the index of completed solutions is expected to change over time (having more and more solutions). As of yet there is no update notifications or a changelog so unfortunately you may have to revisit the site occasionally and see if the index of solutions has changed (alternatively you can check [git log of the repository](https://github.com/rahdeck/rahdeck.github.io/commits/master) if you find it a better change tracking mechanism).
+* I make no guarantees about the correctness of the solutions. In fact, it's quite likely there are a whole bunch of wrong answers or incorrect reasoning even when the answer is correct. I appreciate any feedback and corrections you may have.
+
+Hope you enjoy this site and share the joy of the art of combinatorics!

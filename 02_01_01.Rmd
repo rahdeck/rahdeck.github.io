@@ -1,0 +1,12 @@
+---
+title: "Exercise 2.1.1"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> The population of Carlisle, Pennsylvania, is about 20,000. If each resident has three initials, is it true that there must be at least two residents with the same initials? Give a justification of your answer.
+
+`r x <- 26**3; x < 20000`. There are 20,000 inhabitants and by the product rule (in literature also known as the multiplication principle and shortened to MP) there are $26^3 = `r x`$ possibilities for 3 initials which is less than the number of inhabitants so some of the inhabitants must share the inititals.

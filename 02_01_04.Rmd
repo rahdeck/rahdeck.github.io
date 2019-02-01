@@ -1,0 +1,16 @@
+---
+title: "Exercise 2.1.4"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> In our discussion of telephone numbers, suppose that we maintain the original restrictions on area code as in Example 2.3. Suppose that we lengthen the local phone number, allowing it to be any eight-digit number with the restriction that none of the first three digits can be 0 or 1. How many local phone numbers are there?
+
+$$8^3 \cdot 10^5 = `r n <- 8^3 * 10^5; n`$$
+
+> How many phone numbers are there including area code?
+
+$$8 \cdot 2 \cdot 10 \cdot 8^3 \cdot 10^5 = `r n <- 8*2*10*8^3*10^5; n`$$

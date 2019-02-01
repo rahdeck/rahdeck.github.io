@@ -1,9 +1,9 @@
-name: "Radoslaw Majkut's personal website"
+name: "Solutions to Applied Combinatorics 2nd edition"
 output_dir: "."
 navbar:
-  title: "Rado's Website"
+  title: "Applied Combinatorics"
   left:
-    - text: "Home"
+    - text: "Solutions"
       href: index.html
     - text: "About"
       href: about.html

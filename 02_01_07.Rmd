@@ -1,0 +1,33 @@
+---
+title: "Exercise 2.1.7"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> A musical band has to have at least one member. It can contain at most one drummer, at most one pianist, at most one bassist, at most one lead singer, and at most two background singers. How many possible bands are there if we consider any two drummers indistinguishable, and the same holds true for the other categories, and hence call two bands the same if they have the same number of members of each category? Justify your answer.
+
+There are a few methods to solve this problem but being compelled to use the product rule introduced in this chapter we can use the following reasoning: treat each of the four types of member who can appear at most once (drummer, pianist, bassist, lead singer) as 0 (not present) or 1 (present), thus having two possible values, and treat background singers as 0 (none present), 1 (one present) or 2 (two present), thus having 3 possible values and multiply them all. To get the final result remember to subtract one case where all values are 0 (we need at least one band member), giving rise to the following calculation:
+
+$$2 \cdot 2 \cdot 2 \cdot 2 \cdot 3 - 1 = `r n <- (2^4*3)-1; n`$$
+
+We can verify the result above with an alternative (though much longer and painstaking) method of calculation using combinations (which are introduced a bit further in the book):
+
+* A one-member band can be constructed in $\binom{5}{1} = `r n <- choose(5,1); n`$ ways (a single musician from each of 5 possible categories)
+* A two-member band can be constructed in:
+    + $\binom{5}{2} = `r n <- choose(5,2); n`$ ways for two different musicians or
+    + $\binom{2}{2} = `r n<- choose(2,2); n`$ way for two background singers
+* A three-member band can be constructed in:
+    + $\binom{5}{3} = `r n <- choose(5,3); n`$ ways for three different musicians or
+    + $\binom{2}{2} \cdot \binom{4}{1} = `r n <- choose(2,2) * choose(4,1); n`$ ways for two background singers and one other musician
+* A four-member band can be constructed in:
+    + $\binom{5}{4} = `r n <- choose(5,4); n`$ ways for four different musicians or
+    + $\binom{2}{2} \cdot \binom{4}{2} = `r n <- choose(2,2) * choose(4,2); n`$ for two background singers and two other musicians
+* A five-member band can be constructed in:
+    + $\binom{5}{5} = `r n <- choose(5,5); n`$ way for five different musicians or
+    + $\binom{2}{2} \cdot \binom{4}{3} = `r n <- choose(2,2) * choose(4,3); n`$ for two background singers and three other musicians
+* A six-member band can be constructed in only 1 way (the largest allowed band make-up: one drummer, one pianist, one bassist, one lead singer and two background singers)
+
+Adding all those numbers we independently get 47 as a result, which should give us more confidence that our first solution was correct and the approach was valid.

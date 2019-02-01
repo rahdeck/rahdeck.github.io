@@ -1,0 +1,12 @@
+---
+title: "Exercise 2.1.6"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> How many $m \times n$ matrices are there each of whose entries is 0 or 1?
+
+$$2^{m \cdot n}$$
