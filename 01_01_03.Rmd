@@ -1,0 +1,16 @@
+---
+title: "Exercise 1.3"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> Describe how to create an $n \times n$ Latin square.
+
+The following procedure will generate only 1 of many possible Latin squares:
+
+Take an ordered sequence of $n$ integers and use it for the first row. Then pick a direction (left or right). To create the next row, take a previous row and [rotate](https://www.quora.com/What-does-it-mean-by-rotating-an-array-in-programming) it in the initially chosen direction by one (consistently rotate all rows in the same direction). Repeat the rotation and appending of the next row $n-1$ times to get the full square.
+
+To generate all possible $n \times n$ Latin squares, permute rows of the square generated with the procedure above.
