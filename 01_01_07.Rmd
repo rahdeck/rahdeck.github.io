@@ -1,0 +1,77 @@
+---
+title: "Exercise 1.7"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> Suppose that we want to build a trinary code for the 26 letters of the alphabet,
+using strings in which each symbol is 0, 1, or ; 1.
+> (a) Could we encode all 26 letters using strings of length at most 2? Answer this
+question by enumeration.
+
+Letter | Code
+-------|-----
+a      | -1
+b      | 0
+c      | 1
+d      | -1-1
+e      | -10
+f      | -11
+g      | 0-1
+h      | 00
+i      | 01
+j      | 1-1
+k      | 10
+l      | 11 (the last possible code)
+m      | 
+n      |
+o      |
+p      |
+q      |
+r      |
+s      |
+t      |
+u      |
+w      |
+v      |
+x      |
+y      |
+z      |
+
+so the answer is **NO**
+
+> (b) What about using strings of length exactly 3?
+
+Letter | Code
+-------|-----
+a      | -1-1-1
+b      | -1-10
+c      | -1-11
+d      | -10-1
+e      | -100
+f      | -101
+g      | -11-1
+h      | -110
+i      | -111
+j      | 0-1-1
+k      | 0-10
+l      | 0-11
+m      | 00-1
+n      | 000
+o      | 001
+p      | 01-1
+q      | 010
+r      | 011
+s      | 1-1-1
+t      | 1-10
+u      | 1-11
+w      | 10-1
+v      | 100
+x      | 101
+y      | 11-1
+z      | 110
+
+so the answer is **YES**
