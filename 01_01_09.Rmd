@@ -1,0 +1,27 @@
+---
+title: "Exercise 1.9"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> Suppose that in designing a gas pipeline network, we have 2 possible pipe sizes, small ( S ) and large ( L ). If there are 4 possible links, enumerate all possible pipeline networks. (A typical one could be abbreviated LSLL , where the i th letter indicates the size of the i th pipe.)
+
+1. ```SSSS```
+1. ```SSSL```
+1. ```SSLS```
+1. ```SSLL```
+1. ```SLSS```
+1. ```SLSL```
+1. ```SLLS```
+1. ```SLLL```
+1. ```LSSS```
+1. ```LSSL```
+1. ```LSLS```
+1. ```LSLL```
+1. ```LLSS```
+1. ```LLSL```
+1. ```LLLS```
+1. ```LLLL```
