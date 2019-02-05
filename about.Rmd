@@ -4,7 +4,7 @@ title: "About This Website"
 
 I created this website to share my solutions to exercises in ["Applied Combinatorics" 2nd Edition by Fred Roberts and Barry Tesman](https://www.amazon.com/Applied-Combinatorics-Fred-Roberts/dp/1420099825/) with a wider audience in hope that some of you may find them useful for your own understanding.
 
-In the course of reading the book and solving the problems, I discovered a [website with solutions](http://archive.dimacs.rutgers.edu/People/Staff/froberts/Exercises) (by the authors themselves) already exists. The solutions to the problems presented on my website are my own (and they contain explanations on how I arrived at a particular answer, which hopefully are more useful than rather terse answers on the authors' website) but I have compared them with the answers provided in the authors' website and corrected any answers I got wrong, whenever necessary.
+In the course of reading the book and solving the problems, I discovered that a [website with solutions](http://archive.dimacs.rutgers.edu/People/Staff/froberts/Exercises) (by the authors themselves) already exists. The solutions to the problems presented on my website are my own (and they contain explanations on how I arrived at a particular answer, which hopefully are more useful than rather terse answers on the authors' website) but I have compared them with the answers provided in the authors' website and corrected any answers I got wrong, whenever necessary.
 
 A few guarding statements on completeness and quality of the solutions:
 

@@ -9,7 +9,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 > Use enumeration to find the number of bit strings of length at most 4.
 
-As shown in exercise 1.5, there are 14 bit strings of length at most 3. Adding the following sixteen bit strings of length 4:
+As shown in exercise [1.5](01_01_05.html), there are 14 bit strings of length at most 3. Adding the following sixteen bit strings of length 4:
 
 1. $0000$
 2. $0001$

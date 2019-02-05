@@ -9,9 +9,52 @@ knitr::opts_chunk$set(echo = FALSE)
 
 > (Liu [1972]) Suppose that we have two types of drugs to test simultaneously, such as headache remedies and fever remedies. In this situation, we might try to design an experiment in which each type of drug is tested using a Latin square design. However, we also want to make sure that, if at all possible, all combinations of headache and fever remedies are tested. For example, Table 1.9 shows two Latin square designs if we have 3 headache remedies and 3 fever remedies. Also shown in Table 1.9 is a third square, which lists as its *i, j* entry the *i, j* entries from both of the first two squares. We demand that each entry of this third square be different.
 > This is not true in Table 1.9.
+
 > (a) Find an example with 3 headache and 3 fever drugs where the combined square
 has the desired property.
+
+
+##### Headache drugs
+
+$$\begin{bmatrix}1 & 2 & 3\\2 & 3 & 1\\3 & 1 & 2\end{bmatrix}$$
+
+##### Fever drugs
+
+$$\begin{bmatrix}a & b & c\\c & a & b\\b & c & a\end{bmatrix}$$
+
+##### Combined treatments
 
 $$\begin{bmatrix}1,a & 2,b & 3,c\\2,c & 3,a & 1,b\\3,b & 1,c & 2,a\end{bmatrix}$$
 
 > (b) Find another example with 4 headache and 4 fever drugs. (In Chapter 9 we observe that with 6 headache and 6 fever drugs, this is impossible. The existence problem has a negative solution.) Note : If you start with one Latin square design for the headache drugs and cannot find one for the fever drugs so that the combined square has the desired property, you should start with a different design for the headache drugs.
+
+This solutions is courtesy of my wife who enjoys solving Sudoku and other such challenges and solved it for me :-)
+
+##### Headache drugs
+
+$$\begin{bmatrix}
+  3 & 2 & 4 & 1
+\\4 & 1 & 3 & 2
+\\2 & 3 & 1 & 4
+\\1 & 4 & 2 & 3
+\end{bmatrix}$$
+
+##### Fever drugs
+
+$$\begin{bmatrix}
+  b & d & a & c
+\\d & b & c & a
+\\c & a & d & b
+\\a & c & b & d
+\end{bmatrix}$$
+
+##### Combined treatments
+
+$$\begin{bmatrix}
+  3,b & 2,d & 4,a & 1,c
+\\4,d & 1,b & 3,c & 2,a
+\\2,c & 3,a & 1,d & 4,b
+\\1,a & 4,c & 2,b & 3,d
+\end{bmatrix}$$
+
+
