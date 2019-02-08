@@ -11,7 +11,7 @@
 
 
 
-<title>Exercise 1.2</title>
+<title>Exercise 1.4</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -296,28 +296,64 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Exercise 1.2</h1>
+<h1 class="title toc-ignore">Exercise 1.4</h1>
 
 </div>
 
 
 <blockquote>
-<p>Find all possible <span class="math inline">\(3 \times 3\)</span> Latin squares.</p>
+<p>(Liu [1972]) Suppose that we have two types of drugs to test simultaneously, such as headache remedies and fever remedies. In this situation, we might try to design an experiment in which each type of drug is tested using a Latin square design. However, we also want to make sure that, if at all possible, all combinations of headache and fever remedies are tested. For example, Table 1.9 shows two Latin square designs if we have 3 headache remedies and 3 fever remedies. Also shown in Table 1.9 is a third square, which lists as its <em>i, j</em> entry the <em>i, j</em> entries from both of the first two squares. We demand that each entry of this third square be different. This is not true in Table 1.9.</p>
 </blockquote>
-<ol style="list-style-type: decimal">
-<li><span class="math inline">\(\begin{bmatrix}1 &amp; 2 &amp; 3\\2 &amp; 3 &amp; 1\\3 &amp; 1 &amp; 2\end{bmatrix}\)</span></li>
-<li><span class="math inline">\(\begin{bmatrix}1 &amp; 2 &amp; 3\\3 &amp; 1 &amp; 2\\2 &amp; 3 &amp; 1\end{bmatrix}\)</span></li>
-<li><span class="math inline">\(\begin{bmatrix}2 &amp; 3 &amp; 1\\1 &amp; 2 &amp; 3\\3 &amp; 1 &amp; 2\end{bmatrix}\)</span></li>
-<li><span class="math inline">\(\begin{bmatrix}2 &amp; 3 &amp; 1\\3 &amp; 1 &amp; 2\\1 &amp; 2 &amp; 3\end{bmatrix}\)</span></li>
-<li><span class="math inline">\(\begin{bmatrix}3 &amp; 1 &amp; 2\\1 &amp; 2 &amp; 3\\2 &amp; 3 &amp; 1\end{bmatrix}\)</span></li>
-<li><span class="math inline">\(\begin{bmatrix}3 &amp; 1 &amp; 2\\2 &amp; 3 &amp; 1\\1 &amp; 2 &amp; 3\end{bmatrix}\)</span></li>
-<li><span class="math inline">\(\begin{bmatrix}3 &amp; 2 &amp; 1\\2 &amp; 1 &amp; 3\\1 &amp; 3 &amp; 2\end{bmatrix}\)</span></li>
-<li><span class="math inline">\(\begin{bmatrix}3 &amp; 2 &amp; 1\\1 &amp; 3 &amp; 2\\2 &amp; 1 &amp; 3\end{bmatrix}\)</span></li>
-<li><span class="math inline">\(\begin{bmatrix}1 &amp; 3 &amp; 2\\3 &amp; 2 &amp; 1\\2 &amp; 1 &amp; 3\end{bmatrix}\)</span></li>
-<li><span class="math inline">\(\begin{bmatrix}1 &amp; 3 &amp; 2\\2 &amp; 1 &amp; 3\\3 &amp; 2 &amp; 1\end{bmatrix}\)</span></li>
-<li><span class="math inline">\(\begin{bmatrix}2 &amp; 1 &amp; 3\\1 &amp; 3 &amp; 2\\3 &amp; 2 &amp; 1\end{bmatrix}\)</span></li>
-<li><span class="math inline">\(\begin{bmatrix}2 &amp; 1 &amp; 3\\3 &amp; 2 &amp; 1\\1 &amp; 3 &amp; 2\end{bmatrix}\)</span></li>
+<blockquote>
+<ol style="list-style-type: lower-alpha">
+<li>Find an example with 3 headache and 3 fever drugs where the combined square has the desired property.</li>
 </ol>
+</blockquote>
+<div id="headache-drugs" class="section level5">
+<h5>Headache drugs</h5>
+<p><span class="math display">\[\begin{bmatrix}1 &amp; 2 &amp; 3\\2 &amp; 3 &amp; 1\\3 &amp; 1 &amp; 2\end{bmatrix}\]</span></p>
+</div>
+<div id="fever-drugs" class="section level5">
+<h5>Fever drugs</h5>
+<p><span class="math display">\[\begin{bmatrix}a &amp; b &amp; c\\c &amp; a &amp; b\\b &amp; c &amp; a\end{bmatrix}\]</span></p>
+</div>
+<div id="combined-treatments" class="section level5">
+<h5>Combined treatments</h5>
+<p><span class="math display">\[\begin{bmatrix}1,a &amp; 2,b &amp; 3,c\\2,c &amp; 3,a &amp; 1,b\\3,b &amp; 1,c &amp; 2,a\end{bmatrix}\]</span></p>
+<blockquote>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Find another example with 4 headache and 4 fever drugs. (In Chapter 9 we observe that with 6 headache and 6 fever drugs, this is impossible. The existence problem has a negative solution.) Note : If you start with one Latin square design for the headache drugs and cannot find one for the fever drugs so that the combined square has the desired property, you should start with a different design for the headache drugs.</li>
+</ol>
+</blockquote>
+<p>This solution is courtesy of my wife who enjoys solving Sudoku and other such challenges and solved it for me :-)</p>
+</div>
+<div id="headache-drugs-1" class="section level5">
+<h5>Headache drugs</h5>
+<p><span class="math display">\[\begin{bmatrix}
+  3 &amp; 2 &amp; 4 &amp; 1
+\\4 &amp; 1 &amp; 3 &amp; 2
+\\2 &amp; 3 &amp; 1 &amp; 4
+\\1 &amp; 4 &amp; 2 &amp; 3
+\end{bmatrix}\]</span></p>
+</div>
+<div id="fever-drugs-1" class="section level5">
+<h5>Fever drugs</h5>
+<p><span class="math display">\[\begin{bmatrix}
+  b &amp; d &amp; a &amp; c
+\\d &amp; b &amp; c &amp; a
+\\c &amp; a &amp; d &amp; b
+\\a &amp; c &amp; b &amp; d
+\end{bmatrix}\]</span></p>
+</div>
+<div id="combined-treatments-1" class="section level5">
+<h5>Combined treatments</h5>
+<p><span class="math display">\[\begin{bmatrix}
+  3,b &amp; 2,d &amp; 4,a &amp; 1,c
+\\4,d &amp; 1,b &amp; 3,c &amp; 2,a
+\\2,c &amp; 3,a &amp; 1,d &amp; 4,b
+\\1,a &amp; 4,c &amp; 2,b &amp; 3,d
+\end{bmatrix}\]</span></p>
+</div>
 
 
 

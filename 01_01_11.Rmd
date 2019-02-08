@@ -1,0 +1,36 @@
+---
+title: "Exercise 1.11"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> Tables 1.10 and 1.11 give data of overlap in class rosters for several courses in a
+university.
+
+```{r}
+library(DiagrammeR)
+```
+
+> (a) Translate Table 1.10 into a graph as in Example 1.4. 
+
+```{r}
+nodes <- create_node_df(n = 4, type = "number", label = c("English", "Calculus", "History", "Physics"))
+edges <- create_edge_df(from=c(1, 2, 2, 3),
+             to=c(2, 3, 4, 4))
+graph <- create_graph(nodes_df = nodes, edges_df = edges, directed = FALSE)
+render_graph(graph)
+```
+
+> (b) Repeat part (a) for Table 1.11.
+
+```{r}
+nodes <- create_node_df(n = 5, type = "number", label = c("English", "Calculus", "History", "Economics", "Physics"))
+edges <- create_edge_df(from=c(1, 2, 2, 2, 3, 3, 5),
+             to=c(2, 3, 5, 4, 5, 4, 4))
+graph <- create_graph(nodes_df = nodes, edges_df = edges, directed = FALSE)
+render_graph(graph)
+```
+

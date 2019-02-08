@@ -1,5 +1,5 @@
 ---
-title: "Exercise 1.11"
+title: "Exercise 1.4"
 ---
 
 ```{r include=FALSE} 
@@ -28,7 +28,7 @@ $$\begin{bmatrix}1,a & 2,b & 3,c\\2,c & 3,a & 1,b\\3,b & 1,c & 2,a\end{bmatrix}$
 
 > (b) Find another example with 4 headache and 4 fever drugs. (In Chapter 9 we observe that with 6 headache and 6 fever drugs, this is impossible. The existence problem has a negative solution.) Note : If you start with one Latin square design for the headache drugs and cannot find one for the fever drugs so that the combined square has the desired property, you should start with a different design for the headache drugs.
 
-This solutions is courtesy of my wife who enjoys solving Sudoku and other such challenges and solved it for me :-)
+This solution is courtesy of my wife who enjoys solving Sudoku and other such challenges and solved it for me :-)
 
 ##### Headache drugs
 

@@ -1,0 +1,12 @@
+---
+title: "Exercise 1.15"
+---
+
+```{r include=FALSE}
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> Suppose that there are three possible final exam times, Tuesday, Wednesday, and Thursday mornings. Suppose that each instructor of the courses listed in Table 1.10 requests Tuesday morning as a first choice for final exam time. What assignment (assignments) of exam times, if any exist, gives the largest number of instructors their first choice?
+
+Any assignment that includes English and one of Physics or History on Tuesday morning should give two instructors their preferred times.

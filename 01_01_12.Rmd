@@ -1,0 +1,33 @@
+---
+title: "Exercise 1.12"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> (a) Suppose that there are only two possible final examination times for the courses considered in Table 1.10. Is there an assignment of final exam times so that any two classes having a common member get a different exam time? If so, find such an assignment. If not, why not?
+
+It is impossible. The first date might be English and one of Physics or History but the two remaining ones, Calculus and Physics or History have also common members so need to be scheduled on separate dates.
+
+> (b) Repeat part (a) for Table 1.10 if there are three possible final exam times.
+
+It's possible, here's one of the possible schedules:
+
+1. English and Physics
+2. Calculus
+3. History
+
+> (c) Repeat part (a) for Table 1.11 if there are three possible final exam times.
+
+It is impossible. Reasoning similar to (a)
+
+> (d) Repeat part (a) for Table 1.11 if there are four possible final exam times.
+
+Possible, for example:
+
+1. English and Physics
+2. Calculus
+3. History
+4. Economics

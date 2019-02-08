@@ -13,4 +13,8 @@ The following procedure will generate only 1 of many possible Latin squares:
 
 Take an ordered sequence of $n$ integers and use it for the first row. Then pick a direction (left or right). To create the next row, take a previous row and [rotate](https://www.quora.com/What-does-it-mean-by-rotating-an-array-in-programming) it in the initially chosen direction by one (consistently rotate all rows in the same direction). Repeat the rotation and appending of the next row $n-1$ times to get the full square.
 
-To generate all possible $n \times n$ Latin squares, permute rows of the square generated with the procedure above.
+To generate all possible $n \times n$ Latin squares do the following:
+
+* Generate all $n!$ permutations of $n$ elements
+* Generate all possible $n$ groups of those permutations which don't share any element in the same position (called derangements) as rows of an $n \times n$ square
+* Permute rows of each square generated with the procedure above.

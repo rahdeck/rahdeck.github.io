@@ -11,7 +11,7 @@
 
 
 
-<title>Exercise 1.2</title>
+<title>Exercise 1.7</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -296,28 +296,249 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Exercise 1.2</h1>
+<h1 class="title toc-ignore">Exercise 1.7</h1>
 
 </div>
 
 
 <blockquote>
-<p>Find all possible <span class="math inline">\(3 \times 3\)</span> Latin squares.</p>
+<p>Suppose that we want to build a trinary code for the 26 letters of the alphabet, using strings in which each symbol is 0, 1, or ; 1. (a) Could we encode all 26 letters using strings of length at most 2? Answer this question by enumeration.</p>
 </blockquote>
-<ol style="list-style-type: decimal">
-<li><span class="math inline">\(\begin{bmatrix}1 &amp; 2 &amp; 3\\2 &amp; 3 &amp; 1\\3 &amp; 1 &amp; 2\end{bmatrix}\)</span></li>
-<li><span class="math inline">\(\begin{bmatrix}1 &amp; 2 &amp; 3\\3 &amp; 1 &amp; 2\\2 &amp; 3 &amp; 1\end{bmatrix}\)</span></li>
-<li><span class="math inline">\(\begin{bmatrix}2 &amp; 3 &amp; 1\\1 &amp; 2 &amp; 3\\3 &amp; 1 &amp; 2\end{bmatrix}\)</span></li>
-<li><span class="math inline">\(\begin{bmatrix}2 &amp; 3 &amp; 1\\3 &amp; 1 &amp; 2\\1 &amp; 2 &amp; 3\end{bmatrix}\)</span></li>
-<li><span class="math inline">\(\begin{bmatrix}3 &amp; 1 &amp; 2\\1 &amp; 2 &amp; 3\\2 &amp; 3 &amp; 1\end{bmatrix}\)</span></li>
-<li><span class="math inline">\(\begin{bmatrix}3 &amp; 1 &amp; 2\\2 &amp; 3 &amp; 1\\1 &amp; 2 &amp; 3\end{bmatrix}\)</span></li>
-<li><span class="math inline">\(\begin{bmatrix}3 &amp; 2 &amp; 1\\2 &amp; 1 &amp; 3\\1 &amp; 3 &amp; 2\end{bmatrix}\)</span></li>
-<li><span class="math inline">\(\begin{bmatrix}3 &amp; 2 &amp; 1\\1 &amp; 3 &amp; 2\\2 &amp; 1 &amp; 3\end{bmatrix}\)</span></li>
-<li><span class="math inline">\(\begin{bmatrix}1 &amp; 3 &amp; 2\\3 &amp; 2 &amp; 1\\2 &amp; 1 &amp; 3\end{bmatrix}\)</span></li>
-<li><span class="math inline">\(\begin{bmatrix}1 &amp; 3 &amp; 2\\2 &amp; 1 &amp; 3\\3 &amp; 2 &amp; 1\end{bmatrix}\)</span></li>
-<li><span class="math inline">\(\begin{bmatrix}2 &amp; 1 &amp; 3\\1 &amp; 3 &amp; 2\\3 &amp; 2 &amp; 1\end{bmatrix}\)</span></li>
-<li><span class="math inline">\(\begin{bmatrix}2 &amp; 1 &amp; 3\\3 &amp; 2 &amp; 1\\1 &amp; 3 &amp; 2\end{bmatrix}\)</span></li>
+<table>
+<thead>
+<tr class="header">
+<th>Letter</th>
+<th>Code</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>a</td>
+<td>-1</td>
+</tr>
+<tr class="even">
+<td>b</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>c</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>d</td>
+<td>-1-1</td>
+</tr>
+<tr class="odd">
+<td>e</td>
+<td>-10</td>
+</tr>
+<tr class="even">
+<td>f</td>
+<td>-11</td>
+</tr>
+<tr class="odd">
+<td>g</td>
+<td>0-1</td>
+</tr>
+<tr class="even">
+<td>h</td>
+<td>00</td>
+</tr>
+<tr class="odd">
+<td>i</td>
+<td>01</td>
+</tr>
+<tr class="even">
+<td>j</td>
+<td>1-1</td>
+</tr>
+<tr class="odd">
+<td>k</td>
+<td>10</td>
+</tr>
+<tr class="even">
+<td>l</td>
+<td>11 (the last possible code)</td>
+</tr>
+<tr class="odd">
+<td>m</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>n</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>o</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>p</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>q</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>r</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>s</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>t</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>u</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>w</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>v</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>x</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>y</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>z</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>so the answer is <strong>NO</strong></p>
+<blockquote>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>What about using strings of length exactly 3?</li>
 </ol>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th>Letter</th>
+<th>Code</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>a</td>
+<td>-1-1-1</td>
+</tr>
+<tr class="even">
+<td>b</td>
+<td>-1-10</td>
+</tr>
+<tr class="odd">
+<td>c</td>
+<td>-1-11</td>
+</tr>
+<tr class="even">
+<td>d</td>
+<td>-10-1</td>
+</tr>
+<tr class="odd">
+<td>e</td>
+<td>-100</td>
+</tr>
+<tr class="even">
+<td>f</td>
+<td>-101</td>
+</tr>
+<tr class="odd">
+<td>g</td>
+<td>-11-1</td>
+</tr>
+<tr class="even">
+<td>h</td>
+<td>-110</td>
+</tr>
+<tr class="odd">
+<td>i</td>
+<td>-111</td>
+</tr>
+<tr class="even">
+<td>j</td>
+<td>0-1-1</td>
+</tr>
+<tr class="odd">
+<td>k</td>
+<td>0-10</td>
+</tr>
+<tr class="even">
+<td>l</td>
+<td>0-11</td>
+</tr>
+<tr class="odd">
+<td>m</td>
+<td>00-1</td>
+</tr>
+<tr class="even">
+<td>n</td>
+<td>000</td>
+</tr>
+<tr class="odd">
+<td>o</td>
+<td>001</td>
+</tr>
+<tr class="even">
+<td>p</td>
+<td>01-1</td>
+</tr>
+<tr class="odd">
+<td>q</td>
+<td>010</td>
+</tr>
+<tr class="even">
+<td>r</td>
+<td>011</td>
+</tr>
+<tr class="odd">
+<td>s</td>
+<td>1-1-1</td>
+</tr>
+<tr class="even">
+<td>t</td>
+<td>1-10</td>
+</tr>
+<tr class="odd">
+<td>u</td>
+<td>1-11</td>
+</tr>
+<tr class="even">
+<td>w</td>
+<td>10-1</td>
+</tr>
+<tr class="odd">
+<td>v</td>
+<td>100</td>
+</tr>
+<tr class="even">
+<td>x</td>
+<td>101</td>
+</tr>
+<tr class="odd">
+<td>y</td>
+<td>11-1</td>
+</tr>
+<tr class="even">
+<td>z</td>
+<td>110</td>
+</tr>
+</tbody>
+</table>
+<p>so the answer is <strong>YES</strong></p>
 
 
 

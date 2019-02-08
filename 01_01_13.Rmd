@@ -1,0 +1,18 @@
+---
+title: "Exercise 1.13"
+---
+
+```{r include=FALSE}
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> Suppose that in the situation of Table 1.5, the acceptable meeting times for Transportation are Tuesday and Thursday, for Education is Wednesday, and for all others are Tuesday, Wednesday, and Thursday. Show that no assignment of meeting times is possible.
+
+The only possible solution for 3 meeting times (regardless of which pair meets on which day) is:
+
+* Education and Transportation
+* Finance and Health
+* Environment and Housing
+
+Given that Education can only do Wednesday while Transportation cannot, there exist no solution.

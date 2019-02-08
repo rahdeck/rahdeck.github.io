@@ -1,0 +1,21 @@
+---
+title: "Exercise 1.14"
+---
+
+```{r include=FALSE}
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> (a) Suppose that in the situation of Table 1.10, the acceptable exam time schedules for each course are given in Table 1.12. Answer Exercise 12(b) if, in addition, each exam must be scheduled at an acceptable time.
+
+It cannot be satisfied because English can only do Thur. AM and neither History or Physics can do it.
+
+> (b) Suppose that in the situation of Table 1.11, the acceptable exam time schedules for each course are given in Table 1.13. Answer Exercise 12(d) if, in addition, each exam must be scheduled at an acceptable time.
+
+It is possible. One such arrangement is:
+
+* Mon AM: Economics
+* Tue AM: Calculus
+* Wed AM: English and History
+* Thu AM: Physics
