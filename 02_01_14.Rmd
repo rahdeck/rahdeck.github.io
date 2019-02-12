@@ -1,3 +1,20 @@
-14.
-    a. $$3 \cdot 2 \cdot 3 = `r n <- 3 * 2 * 3; n`$$
-    b. $$2^{3 \cdot 2 \cdot 3}$$
+> When acting on loan applications it can be concluded, based on historical records, that loan applicants having certain combinations of features can be expected to repay their loans and those who have other combinations of features cannot. As their main features, suppose that a bank uses:
+
+> **Marital Status**: Married, Single (never married), Single (previously married).
+> 
+> **Past Loan**: Previous default, No previous default.
+>
+> **Employment**: Employed, Unemployed (within 1 year), Unemployed (more than 1 year).
+
+> (a) How many different loan applications are possible when considering these features?
+
+By the product rule we multiply the number of each features:
+
+$$3 \cdot 2 \cdot 3 = `r n <- 3 * 2 * 3; n`$$
+
+
+> (b) How many manifestations of loan repayment/default are possible when considering these features?
+
+Multiply number of possible applications (18) by 2 (repayment or default):
+
+$$3 \cdot 2 \cdot 3 \cdot 2 = `r n <- 3 * 2 * 3 * 2 ; n`$$
