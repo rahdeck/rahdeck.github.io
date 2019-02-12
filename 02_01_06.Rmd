@@ -9,4 +9,6 @@ knitr::opts_chunk$set(echo = FALSE)
 
 > How many $m \times n$ matrices are there each of whose entries is 0 or 1?
 
+We can treat an $m \times n$ matrix as a bit string of length $m \times n$. With two choices (0 or 1) at each position we have:
+
 $$2^{m \cdot n}$$
