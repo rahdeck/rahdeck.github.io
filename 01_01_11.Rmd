@@ -21,7 +21,7 @@ nodes <- create_node_df(n = 4, type = "number", label = c("English", "Calculus",
 edges <- create_edge_df(from=c(1, 2, 2, 3),
              to=c(2, 3, 4, 4))
 graph <- create_graph(nodes_df = nodes, edges_df = edges, directed = FALSE)
-render_graph(graph)
+render_graph(graph, layout = "tree")
 ```
 
 > (b) Repeat part (a) for Table 1.11.
@@ -31,6 +31,6 @@ nodes <- create_node_df(n = 5, type = "number", label = c("English", "Calculus",
 edges <- create_edge_df(from=c(1, 2, 2, 2, 3, 3, 5),
              to=c(2, 3, 5, 4, 5, 4, 4))
 graph <- create_graph(nodes_df = nodes, edges_df = edges, directed = FALSE)
-render_graph(graph)
+render_graph(graph, layout = "circle")
 ```
 
