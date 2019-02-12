@@ -1,5 +1,5 @@
 ---
-title: "Exercise 2.1.8"
+title: "Exercise 2.1.9"
 ---
 
 ```{r include=FALSE} 
@@ -7,11 +7,21 @@ knitr::opts_chunk$set(options(scipen = 999))
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-> How many nonnegative integers less than 1 million contain the digit 2?
+> Enumerate all switching functions of 2 variables.
 
-The number of all nonnegative integers less than 1 million is $10^6$ because there are ten possible digits at each of the 6 positions). Before you object that this includes numbers like 000010 and 002222 and excludes numbers like 1, 15 or 2098, consider that if we treat a leading 0 as signifying lack of any digit, then it starts to make sense. A number like 000010 is simply 10 and 002222 is 2222, while 2098 is itself. Then we can represent all nonnegative integers below 1 million as having six digits each (from 000000 to 999999) and the calculation makes sense.
-
-We subtract from it the number of all integers that do *NOT* contain 2, which is $9^6$ (nine possible digits (remember, 2 is excluded) at each of the 6 positions) and get:
-
-$$10^6 - 9^6 = `r n <- 10^6 - 9^6; n`$$
-
+1. ```0000```
+1. ```0001```
+1. ```0010```
+1. ```0011```
+1. ```0100```
+1. ```0101```
+1. ```0110```
+1. ```0111```
+1. ```1000```
+1. ```1001```
+1. ```1010```
+1. ```1011```
+1. ```1100```
+1. ```1101```
+1. ```1110```
+1. ```1111```
