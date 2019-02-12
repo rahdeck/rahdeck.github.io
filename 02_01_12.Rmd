@@ -1,4 +1,16 @@
-12.
-    a. $$2^p$$
-    b. $$2^{p}-1$$
+---
+title: "Exercise 2.1.12"
+---
 
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> (Stanat and McAllister [1977]) In some computers, an integer (positive or negative) is represented by using bit strings of length $p$ . The last bit in the string represents the sign, and the first $p - 1$ bits are used to encode the integer. What is the largest number of distinct integers that can be represented in this way for a given $p$?
+
+We can represent $2^{p-1}$ integers and multiply that by 2 (sign: - or +) to get the total of $2 \cdot 2^{p-1} = 2^p$ integers
+
+> What if 0 must be one of these integers? (The sign of 0 is + or -.)
+
+We must exclude one of the two 0's that we have included in the total above to get $2^{p}-1$ integers
