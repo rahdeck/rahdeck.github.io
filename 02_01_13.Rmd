@@ -1,5 +1,24 @@
-13.
-    a. $$2^m \cdot 2^{p-m}$$
-    b. $$2^{m-1} \cdot 2^{p-m}$$
-    c. $$$$
+---
+title: "Exercise 2.1.13"
+---
 
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+> (Stanat and McAllister [1977]) Every integer can be represented (nonuniquely) in the form $a \times 2^b$ , where $a$ and $b$ are integers. The _floating-point representation_ for an integer uses a bit string of length $p$ to represent an integer by using the first $m$ bits to encode $a$ and the remaining $p - m$ bits to encode $b$, with the latter two encodings performed as described in Exercise 12.
+
+> (a) What is the largest number of distinct integers that can be represented using the floating-point notation for a given $p$?
+
+$$2^m \cdot 2^{2^{p-m}} = 2^{m+2^{p-m}}$$
+    
+
+> (b) Repeat part (a) if the floating-point representation is carried out in such a way that the leading bit for encoding the number $a$ is 1.
+
+$$2^{m-1} \cdot 2^{2^{p-m}} = 2^{m+2^{p-m}-1}$$
+
+> (c) Repeat part (a) if 0 must be included.
+
+$$2^{p}-1$
