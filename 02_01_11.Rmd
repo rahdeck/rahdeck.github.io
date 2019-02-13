@@ -1,0 +1,12 @@
+---
+title: "Exercise 2.1.11"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> A switching function S is called self-dual if the value S of a bit string is unchanged when 0's and 1's are interchanged. For instance, the function S of Table 2.2 is self-dual, but the function T of that table is not. How many self-dual switching functions of n variables are there?
+
+$$2^{2^{n-1}}$$

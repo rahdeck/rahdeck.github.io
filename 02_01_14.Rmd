@@ -15,6 +15,6 @@ $$3 \cdot 2 \cdot 3 = `r n <- 3 * 2 * 3; n`$$
 
 > (b) How many manifestations of loan repayment/default are possible when considering these features?
 
-Multiply number of possible applications (18) by 2 (repayment or default):
+Multiply the number of possible applications (18) by the number of possible loan statuses (2):
 
 $$3 \cdot 2 \cdot 3 \cdot 2 = `r n <- 3 * 2 * 3 * 2 ; n`$$

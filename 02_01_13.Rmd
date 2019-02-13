@@ -12,13 +12,17 @@ knitr::opts_chunk$set(echo = FALSE)
 
 > (a) What is the largest number of distinct integers that can be represented using the floating-point notation for a given $p$?
 
-$$2^m \cdot 2^{2^{p-m}} = 2^{m+2^{p-m}}$$
+We have $m$ bits to represent $a$ and $p - m$ bits to represent $b$ so by the product rule there are:
+
+$$2^m \cdot 2^{p-m} = 2^p$$
+
+possible integers
     
 
 > (b) Repeat part (a) if the floating-point representation is carried out in such a way that the leading bit for encoding the number $a$ is 1.
 
-$$2^{m-1} \cdot 2^{2^{p-m}} = 2^{m+2^{p-m}-1}$$
+$$2^{m-1} \cdot 2^{p-m} = 2^{p-1}$$
 
 > (c) Repeat part (a) if 0 must be included.
 
-$$2^{p}-1$
+$$(2^{m}-1) \cdot 2^{p-m}$$
