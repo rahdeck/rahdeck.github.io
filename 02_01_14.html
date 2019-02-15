@@ -11,7 +11,7 @@
 
 
 
-<title>Applied Combinatorics solutions</title>
+<title></title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -296,47 +296,39 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Applied Combinatorics solutions</h1>
 
 </div>
 
 
-<div id="chapter-1" class="section level1">
-<h1>Chapter 1</h1>
-<ul>
-<li><a href="01_01_01.html">1</a>, <a href="01_01_02.html">2</a>, <a href="01_01_03.html">3</a>, <a href="01_01_04.html">4</a>, <a href="01_01_05.html">5</a>, <a href="01_01_06.html">6</a>, <a href="01_01_07.html">7</a>, <a href="01_01_08.html">8</a>, <a href="01_01_09.html">9</a>, <a href="01_01_10.html">10</a>, <a href="01_01_11.html">11</a>, <a href="01_01_12.html">12</a>, <a href="01_01_13.html">13</a>, <a href="01_01_14.html">14</a>, <a href="01_01_15.html">15</a></li>
-</ul>
-</div>
-<div id="chapter-2" class="section level1">
-<h1>Chapter 2</h1>
-<ul>
-<li>Section 2.1: <a href="02_01_01.html">1</a>, <a href="02_01_02.html">2</a>, <a href="02_01_03.html">3</a>, <a href="02_01_04.html">4</a>, <a href="02_01_05.html">5</a>, <a href="02_01_06.html">6</a>, <a href="02_01_07.html">7</a>, <a href="02_01_08.html">8</a>, <a href="02_01_09.html">9</a> , <a href="02_01_10.html">10</a>, <a href="02_01_11.html">11</a>, <a href="02_01_12.html">12</a>, <a href="02_01_13.html">13</a>, <a href="02_01_14.html">14</a></li>
-<li>Section 2.2: <a href="02_02_01.html">1</a>, <a href="02_02_02.html">2</a>, <a href="02_02_03.html">3</a>, <a href="02_02_04.html">4</a>, <a href="02_02_05.html">5</a>, <a href="02_02_06.html">6</a>, <a href="02_02_07.html">7</a>, <a href="02_02_08.html">8</a> <!--- 
-* Section 2.3:
-* Section 2.4:
-* Section 2.5:
-* Section 2.6:
-* Section 2.7:
-* Section 2.8:
-* Section 2.9:
-* Section 2.10:
-* Section 2.11:
-* Section 2.12:
-* Section 2.13:
-* Section 2.14:
-* Section 2.15:
-* Section 2.16:
-* Section 2.17:
-* Section 2.18:
-* Section 2.19:
-
-# Chapter 3
-
-# Chapter 4
-
-# Chapter 5
---></li>
-</ul>
+<blockquote>
+<p>When acting on loan applications it can be concluded, based on historical records, that loan applicants having certain combinations of features can be expected to repay their loans and those who have other combinations of features cannot. As their main features, suppose that a bank uses:</p>
+</blockquote>
+<blockquote>
+<p><strong>Marital Status</strong>: Married, Single (never married), Single (previously married).</p>
+<p><strong>Past Loan</strong>: Previous default, No previous default.</p>
+<p><strong>Employment</strong>: Employed, Unemployed (within 1 year), Unemployed (more than 1 year).</p>
+</blockquote>
+<blockquote>
+<ol style="list-style-type: lower-alpha">
+<li>How many different loan applications are possible when considering these features?</li>
+</ol>
+</blockquote>
+<p>By the product rule we multiply the number of each features:</p>
+<p><span class="math display">\[3 \cdot 2 \cdot 3 = 18\]</span></p>
+<blockquote>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>How many manifestations of loan repayment/default are possible when considering these features?</li>
+</ol>
+</blockquote>
+<p><em>Please note that my solution differs from the authors’ one given at the end</em></p>
+<p>Multiply the number of possible applications (18) by the number of possible loan statuses (2):</p>
+<p><span class="math display">\[3 \cdot 2 \cdot 3 \cdot 2 = 36\]</span></p>
+<p><em>Authors’ answer</em>: <span class="math inline">\(2^{3 \cdot 2 \cdot 3}\)</span><a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></p>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Not sure why the number of possible applications is in the exponent<a href="#fnref1">↩</a></p></li>
+</ol>
 </div>
 
 

@@ -304,10 +304,12 @@ $(document).ready(function () {
 <blockquote>
 <p>In our discussion of telephone numbers, suppose that we maintain the original restrictions on area code as in Example 2.3. Suppose that we lengthen the local phone number, allowing it to be any eight-digit number with the restriction that none of the first three digits can be 0 or 1. How many local phone numbers are there?</p>
 </blockquote>
+<p>There are 8 choices for the first 3 positions and 10 choices for each of the subsequent 5 positions:</p>
 <p><span class="math display">\[8^3 \cdot 10^5 = 51200000\]</span></p>
 <blockquote>
 <p>How many phone numbers are there including area code?</p>
 </blockquote>
+<p>There are 8 choices (cannot have 0 or 1) for the first position, 2 choices (0 or 1) in the second position and all 10 digits for the third position, followed by the result from above.</p>
 <p><span class="math display">\[8 \cdot 2 \cdot 10 \cdot 8^3 \cdot 10^5 = 8192000000\]</span></p>
 
 
