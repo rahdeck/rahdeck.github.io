@@ -1,5 +1,9 @@
 name: "Solutions to Applied Combinatorics 2nd edition"
 output_dir: "."
+output:
+  html_document:
+    includes:
+       in_header: GA_Script.html
 navbar:
   title: "Applied Combinatorics"
   left:
