@@ -9,4 +9,10 @@ knitr::opts_chunk$set(echo = FALSE)
 
 > A library has 1,700,000 books, and the librarian wants to encode each using a codeword consisting of 3 letters followed by 3 numbers. Are there enough codewords to encode all 1,700,000 books with different codewords?
 
-`r x <- 26^3 * 10^3; x > 1700000`. There are 1,700,000 books and $26^3 \cdot 10^3 = `r x`$ possible encodings which is `r ifelse(26^3 * 10^3 > 1700000, 'more', 'less')` than the number of books
+*Please note that my solution differs from the authors' one given at the end*
+
+`r ifelse(26^3 * 10^3 > 1700000, "Yes", "No")`. There are 1,700,000 books and $26^3 \cdot 10^3 = `r x <- 26^3 * 10^3; x`$ possible encodings which is `r ifelse(26^3 * 10^3 > 1700000, 'more', 'less')` than the number of books
+
+*Authors' answer*: $yes: 26^3 \cdot 10^3 > 5,000$[^1]
+
+[^1]: The authors' calculation is the same but I don't know where 5,000 comes from, possibly a typo?
