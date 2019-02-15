@@ -1,0 +1,20 @@
+---
+title: "Exercise 2.2.8"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> How many DNA chains of length 3 have no C's at all or have no T's in the first position?
+
+*Please note that my solution differs from the authors' one given at the end*
+
+There are $3^3$ chains of length 3 with no C's at all and $3 \cdot 4^2$ chains of length 3 with no T in the first position. However, these two sets have some overlap (they're not disjoint, i.e. in both sets we have DNA chains with no C's and not initial T. eg. $AAG$ or $GAT$) and we have counted those chains twice so we need to subtract them. The number of DNA chains in the overlap, with no C's *and* no initial T, is $2 \cdot 3^2$ (two choices for the initial position (no C or T), and 3 choices for the two subsequent positions (no C)), so finally we arrive at a total of:
+
+$$3^3 + 3 \cdot 4^2 - 2 \cdot 3^2= `r n <- 3^3 + 3 * 4^2 - 2 * 3^2; n`$$
+
+*Authors' answer*: $3^3 + 3 \cdot 4^3$[^1]
+
+[^1]: The total given by this calculation look to be more than the number of all possible DNA chains of length 3 (which should be $4^3$)

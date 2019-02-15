@@ -1,0 +1,12 @@
+---
+title: "Exercise 2.2.7"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> Suppose that a pipeline network is to have 30 links. For each link, there are 2 choices: The pipe may be any one of 7 sizes and any one of 3 materials. How many different pipeline networks are there?
+
+$$(7 \cdot 3)^{30}$$

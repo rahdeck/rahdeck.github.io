@@ -1,0 +1,16 @@
+---
+title: "Exercise 2.2.4"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> Each American Express card has a 15-digit number for computer identification purposes. If each digit can be any number between 0 and 9, are there enough different account numbers for 10 million credit-card holders?
+
+`r 10^15 > 10^7` because $10^{15} `r ifelse(10^15 > 10^7, '>', '<')` 10^7$
+
+> Would there be if the digits were only 0 or 1?
+
+`r 2^15 > 10^7` because $2^{15} `r ifelse(2^15 > 10^7, '>', '<')` 10^7$

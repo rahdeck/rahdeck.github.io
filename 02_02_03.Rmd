@@ -1,0 +1,12 @@
+---
+title: "Exercise 2.2.3"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> How many numbers are there which have five digits, each being a number in $\{1, 2,..., 9\}$, and either having all digits odd or having all digits even?
+
+By the product rule there are $5^5$ numbers that have all digits odd (from $\{1,2,3,5,9\}$) and $5^4$ numbers that have all digits even (from $\{2,4,6,8\}$). Then, by the sum rule there are a total of $5^5 + 5^4 = `r n <- 5^5 + 5^4; n`$ numbers that have all digits odd or all digits even.

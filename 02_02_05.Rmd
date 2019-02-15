@@ -1,0 +1,12 @@
+---
+title: "Exercise 2.2.5"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> How many 5-letter words either start with d or do not have the letter d?
+
+There are $26^4$ 5-letter words that start with *d* and $25^5$ words that do not have the letter *d* for the total of $26^4 + 25^5 = `r n <- 26^4 + 25^5; n`$ 

@@ -1,0 +1,26 @@
+---
+title: "Exercise 2.2.2"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> A committee is to be chosen from among 8 scientists, 7 psychics, and 12 clerics. If the committee is to have two members of different backgrounds, how many such committees are there?
+
+There can be 3 "types" of commitees:
+
+1. scientist + psychic commitee
+1. scientist + cleric commitee
+1. psychic + cleric commitee
+
+The scientist + psychic commitee can be created in $8 \cdot 7 = `r n <- 8 * 7; n`$ ways
+
+The scientist + cleric commitee can be created in $8 \cdot 12 = `r n <- 8 * 12; n`$ ways
+
+The psychic +cleric commitee can be created in $7 \cdot 12 = `r n <- 7 * 12; n`$ ways
+
+The number of all possible commitees is the sum of the above:
+
+$$8 \cdot 7 + 8 \cdot 12 + 7 \cdot 12 = `r n <- 8 * 7 + 8*12 + 7 * 12; n`$$
