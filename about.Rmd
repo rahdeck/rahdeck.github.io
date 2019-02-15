@@ -10,8 +10,8 @@ A few guarding statements on completeness and quality of the solutions:
 
 * This website is a work in progress - I'm publishing solutions as I'm making my way through the book, so the index of completed solutions is expected to change over time (having more and more solutions). As of yet there is no update notifications or a changelog so unfortunately you may have to revisit the site occasionally and see if the index of solutions has changed (alternatively you can check [git log of the repository](https://github.com/rahdeck/rahdeck.github.io/commits/master) if you find it a better change tracking mechanism).
 * I make no guarantees about the correctness of the solutions. In fact, it's quite likely there are a whole bunch of wrong answers or incorrect reasoning even when the answer is correct. I appreciate any feedback and corrections you may have.
-* In a few cases I have arrived at a different solution than that offered by the authors and couldn't reconcile the two. I indicate when that happens but post both solutions for the reader so they can decide whether my solution and explanation make sense.
+* In a few cases I have arrived at a different solution than that offered by the authors and couldn't reconcile the two, either due to authors' answer being wrong, me misinterpreting the question or simply me getting the answer wrong (most likely). I indicate when that happens but post both solutions for the reader's sake so they can decide whether my solution and explanation make sense.
 
-I appreciate feedback on the site via [email](mailto:rahdeck@gmail.com).
+I appreciate feedback on the site, especially on the solutions, via [email](mailto:rahdeck@gmail.com).
 
 Hope you enjoy this site and share the joy of the art of combinatorics!
