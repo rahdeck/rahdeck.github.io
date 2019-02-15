@@ -1,0 +1,14 @@
+---
+title: "Exercise 2.1.10"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> If a function assigns 0 or 1 to each switching function of $n$ variables, how many such functions are there?
+
+There are $2^{2^n}$ switching functions of $n$ variables. For each such function we have two choices (0 or 1) so we need to multiply 2 by itself $2^{2^n}$ times resulting in:
+
+$$2^{2^{2^n}}$$
