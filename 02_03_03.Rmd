@@ -1,0 +1,12 @@
+---
+title: "Exercise 2.3.3"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> How many permutations of $\{1, 2, ..., n\}$ begin with $1$ and end with $n$?
+
+That should be all permutations of $n - 2$ elements (without $1$ and $n$ since they don't get permuted), which is $(n - 2)!$

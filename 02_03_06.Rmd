@@ -1,0 +1,17 @@
+---
+title: "Exercise 2.3.6"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> (a) How many permutations of $\{1, 2, 3, 4, 5\}$ have $2$ in the second place?
+
+Fix the $2$ in the second place and permute the remaining 4 elements for the total of $4! = `r n <- factorial(4); n`$ permutations.
+
+
+>(b) How many permutations of $\{1, 2, ..., n\}$, $n > 3$, have $2$ in the second place and $3$ in the third place?
+
+Fix $2$ in the second place and $3$ in the third place and permute the remaining $n - 2$ elements for the total of $(n - 2)!$ permutations.

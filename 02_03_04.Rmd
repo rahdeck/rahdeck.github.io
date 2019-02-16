@@ -1,0 +1,26 @@
+---
+title: "Exercise 2.3.4"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r include=FALSE}
+s <- function(x) {sqrt(2*pi*x)*(x/exp(1))^x;}
+```
+
+> Compute $s_n$ and compare it to $n!$ if
+
+> (a) $n = 4$
+
+$4! = `r n <- factorial(4); n`$ and $s_4 = `r n <- s(4); n`$
+
+> (b) $n = 6$
+
+$6! = `r n <- factorial(6); n`$ and $s_6 = `r n <- s(6); n`$
+
+> (c) $n = 8$
+
+$8! = `r n <- factorial(8); n`$ and $s_8 = `r n <- s(8); n`$

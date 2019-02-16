@@ -1,0 +1,12 @@
+---
+title: "Exercise 2.3.5"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> How many permutations of $\{1, 2, 3, 4\}$ begin with an odd number?
+
+There are 2 odd numbers (1 and 3) and for each of them there are $3!$ permutations of the remaining numbers, giving the total of $2 \cdot 3! = `r n <- 2 * factorial(3); n`$ 

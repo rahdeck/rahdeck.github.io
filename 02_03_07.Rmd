@@ -1,0 +1,12 @@
+---
+title: "Exercise 2.3.7"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> How many ways are there to rank five potential basketball recruits of different heights if the tallest one must be ranked first and the shortest one last?
+
+Since the first and the last one are fixed, we can only permute the remaining 3 recruits for the total of $3! = `r n <- factorial(3); n`$ permutations.

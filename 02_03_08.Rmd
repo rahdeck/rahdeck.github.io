@@ -1,0 +1,18 @@
+---
+title: "Exercise 2.3.8"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> (Cohen [1978])
+
+> (a) In a six-cylinder engine, the even-numbered cylinders are on the left and the odd-numbered cylinders are on the right. A good firing order is a permutation of the numbers 1 to 6 in which right and left sides are alternated. How many possible good firing orders are there which start with a left cylinder?
+
+We can separately permute the 3 left cylinders and the 3 right cylinders and multiply the number of permutations for the total of $3! \cdot 3! = `r n <- factorial(3)^2; n`$
+
+> (b) Repeat for a $2n$-cylinder engine.
+
+Generalized calculation above: $n! \cdot n!$
