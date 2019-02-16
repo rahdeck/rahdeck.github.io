@@ -9,4 +9,4 @@ knitr::opts_chunk$set(echo = FALSE)
 
 > How many permutations of $\{1, 2, ..., n\}$ begin with $1$ and end with $n$?
 
-That should be all permutations of $n - 2$ elements (without $1$ and $n$ since they don't get permuted), which is $(n - 2)!$
+That should be all permutations of $n - 2$ elements (without $1$ and $n$ since they're fixed and don't get permuted), which is $(n - 2)!$

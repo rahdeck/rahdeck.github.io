@@ -9,6 +9,6 @@ knitr::opts_chunk$set(echo = FALSE)
 
 > Ten job applicants have been invited for interviews, five having been told to come in the morning and five having been told to come in the afternoon. In how many different orders can the interviews be scheduled? Compare your answer to the number of different orders in which the interviews can be scheduled if all 10 applicants were told to come in the morning.
 
-I assume that in the first part of the question concrete 5 candidates each have already been selected for morning and afternoon sessions and that selection is fixed. Then, the number of possible schedules is $5! \cdot 5! = `r n <- factorial(5)^2; n`$.
+I assume that in the first part of the question concrete 5 candidates have already been selected for each of the morning and afternoon sessions and that selection is fixed. Then, the number of possible schedules is $5! \cdot 5! = `r n <- factorial(5)^2; n`$.
 
 If all applicants were told to come in the morning the number of possible schedules would be $10! = `r n <- factorial(10); n`$.

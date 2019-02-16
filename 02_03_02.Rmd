@@ -9,4 +9,4 @@ knitr::opts_chunk$set(echo = FALSE)
 
 > How many permutations of $\{1, 2, 3, 4, 5\}$ begin with 5?
 
-It should be 5 followed by all permutations of $\{1, 2, 3, 4\}$ of which the total is $4! = `r n <- factorial(4); n`$
+It should be 5 (because it is fixed and doesn't get permuted) followed by all permutations of $\{1, 2, 3, 4\}$ for the total of $4! = `r n <- factorial(4); n`$ permutations.
