@@ -1,0 +1,30 @@
+---
+title: "Exercise 2.4.9"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> (Hopcroft [1981]) Suppose that $L$ is a collection of bit strings of length $n$. Suppose that $A$ is an algorithm which determines, given a bit string of length $n$, whether or not it is in $L$. Suppose that $A$ always takes $2^n$ seconds to provide an answer. Then $A$ has the same worst-case and average-case computational complexity, $2^n$. Suppose that $\hat{L}$ consists of all bit strings of the form 
+> 
+> $x_1x_2...x_nx_1x_2...x_n$,
+>
+> where $x_1x_2...x_n$ is in $L$. For instance, if $L = \{00, 10\}$, then $\hat{L}$ = \{0000, 1010\}. Consider the following Algorithm $B$ for determining, given a bit string $y = y_1y_2...y_{2n}$ of length $2n$, whether or not it is in $\hat{L}$. First, determine if $y$ is of the form $x_1x_2...x_nx_1x_2...x_n$. This is easy to check. Assume for the sake of discussion that it takes essentially 0 seconds to answer this question. If $y$ is not of the proper form, stop and say that $y$ is not in $\hat{L}$. If $y$ is of the proper form, check if the first $n$ digits of $y$ form a bit string in $L$.
+
+> (a) Compute the worst-case complexity of Algorithm $B$.
+
+It is when the string is in $\hat{L}$ when the worst case happens and its complexity is equal to $2^n$ (assuming the subalgorithm of $B$ used to check whether the first $n$ digits are in $L$ is $A$)
+
+> (b) Compute the average-case complexity of Algorithm $B$.
+
+There are a total of $2^{2n}$ bit strings of length $2n$. There are $2^n$ strings in the proper form and $2^{2n} - 2^n$ strings not in the proper form.
+
+We can compute the average case complexity as the sum of the product of the number of properly formed strings times the complexity of A and the product of the number of strings not in the proper form times 0 divided by total number of all possible strings:
+
+$$\frac{2^n \cdot 2^n + (2^{2n} -2^n) \cdot 0}{2^{2n}} = \frac{2^{2n}}{2^{2n}} = 1$$
+
+> (c) Do your answers suggest that average-case complexity might not be a good measure? Why?
+
+The average case complexity is actually lower than worst-case complexity. This is because there are many more strings not in the proper form, which take 0 seconds to check, bringing the average way down.

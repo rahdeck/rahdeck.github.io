@@ -1,0 +1,12 @@
+---
+title: "Exercise 2.4.3"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> Consider the problem of scheduling $n$ legislative committees in order for meetings in n consecutive time slots. Each committee chair indicates which time slot is his or her first choice, and we seek to schedule the meetings so that the number of chairs receiving their first choice is as large as possible. Suppose that we solve this problem by enumerating all possible schedules, and for each we compute the number of chairs receiving their first choice. What is the computational complexity of this procedure? (Make an assumption about the number of steps required to compute the number of chairs receiving their first choice.) 
+
+If we assume the time to compute the number of chairs receiving their first choice is $n$ (as is the length of each schedule) then the computational complexity is $O(n \cdot n!)$

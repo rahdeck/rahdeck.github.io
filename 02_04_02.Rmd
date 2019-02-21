@@ -1,0 +1,14 @@
+---
+title: "Exercise 2.4.2"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> If a computer could consider 100 billion orders a second instead of just 1 billion, how many years would it take to solve the traveling salesman problem by enumeration if n = 26? (Does the improvement in computer speed make a serious difference in conclusions based on footnote 4 on page 26?)
+
+It would take $\frac{25!}{10^{11} \cdot 3600 \cdot 24 \cdot 365} = `r n <- factorial(25)/(10^11 * 3600 * 24 * 365); round(n, 0)`$ years
+
+The improvement doesn't make much difference for conclusions in footnote 4, it only brings the order of magnitude down by 2, from hundreds millions of years to single-digit millions of years

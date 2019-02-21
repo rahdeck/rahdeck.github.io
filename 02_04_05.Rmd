@@ -1,0 +1,37 @@
+---
+title: "Exercise 2.4.5"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> Solve the traveling salesman problem by enumeration if $n = 4$ and the cost $c_{ij}$ is given in the following matrix:
+> $$\begin{bmatrix}- & 1 & 8 & 11\\16 & - & 3 & 6\\4 & 9 & - & 11\\8 & 3 & 2 & -\end{bmatrix}$$
+
+```{r results='asis'}
+knitr::opts_chunk$set(echo = FALSE)
+
+library(gtools)
+costs <- matrix(c(NA, 1, 8, 11, 16, NA, 3, 6, 4, 9, NA, 11, 8, 3, 2, NA), nrow = 4, ncol = 4, byrow = TRUE)
+p <- permutations(4, 4)
+# add the starting city as the final city
+p <- cbind(p, t(t(p[,1])))
+results <- apply(p, 1, function(x) { list(x, c(costs[x[1], x[2]], costs[x[2], x[3]], costs[x[3], x[4]], costs[x[4], x[5]]), sum(costs[x[1], x[2]], costs[x[2], x[3]], costs[x[3], x[4]], costs[x[4], x[5]])) })
+cat("Order      | Total cost          ")
+cat("\n")
+cat("-----------|---------------------")
+cat("\n")
+formatted_strings <- lapply(results, function(x) { sprintf("%10s | %20s", paste(x[[1]], collapse = " "), paste(paste(x[[2]], collapse = " + "), sum(x[[2]]), sep = " = ")) })
+discarded_result <- lapply(formatted_strings, function(x){cat(x); cat("\n")})
+```
+
+So there are four permutations that give the same minumum cost of 13:
+
+1. 1 2 4 3 1
+1. 2 4 3 1 2
+1. 3 1 2 4 3
+1. 4 3 1 2 4
+
+Upon closer inspection they're rotations of the same ordering.

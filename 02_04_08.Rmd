@@ -1,0 +1,18 @@
+---
+title: "Exercise 2.4.8"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> Repeat (Exercise 7)[02_04_07.html] if it takes $3 \cdot 10^{11}$ seconds to examine each key
+
+> (a) the worst-case complexity
+
+Worst case is $n \cdot 3 \cdot 10^{-11}$ seconds
+
+> (b) the average-case complexity
+
+Average case is $\frac{n+1}{2} \cdot 3 \cdot 10^{-11}$ seconds

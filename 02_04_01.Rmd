@@ -1,0 +1,12 @@
+---
+title: "Exercise 2.4.1"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> If a computer could consider 1 billion orders a second, how many years would it take to solve the computer configuration problem of Example 2.17 by enumeration if n is 25?
+
+It would take $\frac{25!}{10^9 \cdot 3600 \cdot 24 \cdot 365} = `r n <- factorial(25)/(10^9 * 3600 * 24 * 365); round(n, 0)`$ years

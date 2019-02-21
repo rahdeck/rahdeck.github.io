@@ -1,0 +1,29 @@
+---
+title: "Exercise 2.4.6"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> Solve the computer system scheduling problem of Example 2.17 if $n = 3$ and the
+cost of converting from the $i$th configuration to the $j$th is given by
+> $$\begin{bmatrix}- & 8 & 11\\12 & - & 4\\3 & 6 & - \end{bmatrix}$$
+
+```{r results='asis'}
+knitr::opts_chunk$set(echo = FALSE)
+
+library(gtools)
+costs <- matrix(c(NA, 8, 11, 12, NA, 4, 3, 6, NA), nrow = 3, ncol = 3, byrow = TRUE)
+p <- permutations(3, 3)
+results <- apply(p, 1, function(x) { list(x, c(costs[x[1], x[2]], costs[x[2], x[3]]), sum(costs[x[1], x[2]], costs[x[2], x[3]])) })
+cat("Order      | Total cost          ")
+cat("\n")
+cat("-----------|---------------------")
+cat("\n")
+formatted_strings <- lapply(results, function(x) { sprintf("%10s | %20s", paste(x[[1]], collapse = " "), paste(paste(x[[2]], collapse = " + "), sum(x[[2]]), sep = " = ")) })
+discarded_result <- lapply(formatted_strings, function(x){cat(x); cat("\n")})
+```
+
+The lowest-cost ordering of 3 programs is $2, 3, 1$

@@ -1,0 +1,18 @@
+---
+title: "Exercise 2.4.7"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> Suppose that it takes $3 \cdot 10^9$ seconds to examine each key in a list. If there are $n$ keys and we search through them in order until we find the right one, find
+
+> (a) the worst-case complexity
+
+Worst case is $n \cdot 3 \cdot 10^{-9}$ seconds
+
+> (b) the average-case complexity
+
+Average case is $\frac{n+1}{2} \cdot 3 \cdot 10^{-9}$ seconds
