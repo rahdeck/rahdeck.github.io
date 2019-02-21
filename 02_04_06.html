@@ -11,7 +11,7 @@
 
 
 
-<title>Applied Combinatorics solutions</title>
+<title>Exercise 2.4.6</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -305,48 +305,49 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Applied Combinatorics solutions</h1>
+<h1 class="title toc-ignore">Exercise 2.4.6</h1>
 
 </div>
 
 
-<div id="chapter-1" class="section level1">
-<h1>Chapter 1</h1>
-<ul>
-<li><a href="01_01_01.html">1</a>, <a href="01_01_02.html">2</a>, <a href="01_01_03.html">3</a>, <a href="01_01_04.html">4</a>, <a href="01_01_05.html">5</a>, <a href="01_01_06.html">6</a>, <a href="01_01_07.html">7</a>, <a href="01_01_08.html">8</a>, <a href="01_01_09.html">9</a>, <a href="01_01_10.html">10</a>, <a href="01_01_11.html">11</a>, <a href="01_01_12.html">12</a>, <a href="01_01_13.html">13</a>, <a href="01_01_14.html">14</a>, <a href="01_01_15.html">15</a></li>
-</ul>
-</div>
-<div id="chapter-2" class="section level1">
-<h1>Chapter 2</h1>
-<ul>
-<li>Section 2.1: <a href="02_01_01.html">1</a>, <a href="02_01_02.html">2</a>, <a href="02_01_03.html">3</a>, <a href="02_01_04.html">4</a>, <a href="02_01_05.html">5</a>, <a href="02_01_06.html">6</a>, <a href="02_01_07.html">7</a>, <a href="02_01_08.html">8</a>, <a href="02_01_09.html">9</a> , <a href="02_01_10.html">10</a>, <a href="02_01_11.html">11</a>, <a href="02_01_12.html">12</a>, <a href="02_01_13.html">13</a>, <a href="02_01_14.html">14</a></li>
-<li>Section 2.2: <a href="02_02_01.html">1</a>, <a href="02_02_02.html">2</a>, <a href="02_02_03.html">3</a>, <a href="02_02_04.html">4</a>, <a href="02_02_05.html">5</a>, <a href="02_02_06.html">6</a>, <a href="02_02_07.html">7</a>, <a href="02_02_08.html">8</a></li>
-<li>Section 2.3: <a href="02_03_01.html">1</a>, <a href="02_03_02.html">2</a>, <a href="02_03_03.html">3</a>, <a href="02_03_04.html">4</a>, <a href="02_03_05.html">5</a>, <a href="02_03_06.html">6</a>, <a href="02_03_07.html">7</a>, <a href="02_03_08.html">8</a>, <a href="02_03_09.html">9</a></li>
-<li>Section 2.4: <a href="02_04_01.html">1</a>, <a href="02_04_02.html">2</a>, <a href="02_04_03.html">3</a>, <a href="02_04_04.html">4</a>, <a href="02_04_05.html">5</a>, <a href="02_04_06.html">6</a>, <a href="02_04_07.html">7</a>, <a href="02_04_08.html">8</a>, <a href="02_04_09.html">9</a></li>
-<li>Section 2.5: COMING SOON! <!--- 
-* Section 2.6:
-* Section 2.7:
-* Section 2.8:
-* Section 2.9:
-* Section 2.10:
-* Section 2.11:
-* Section 2.12:
-* Section 2.13:
-* Section 2.14:
-* Section 2.15:
-* Section 2.16:
-* Section 2.17:
-* Section 2.18:
-* Section 2.19:
-
-# Chapter 3
-
-# Chapter 4
-
-# Chapter 5
---></li>
-</ul>
-</div>
+<blockquote>
+<p>Solve the computer system scheduling problem of Example 2.17 if <span class="math inline">\(n = 3\)</span> and the cost of converting from the <span class="math inline">\(i\)</span>th configuration to the <span class="math inline">\(j\)</span>th is given by <span class="math display">\[\begin{bmatrix}- &amp; 8 &amp; 11\\12 &amp; - &amp; 4\\3 &amp; 6 &amp; - \end{bmatrix}\]</span></p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th>Order</th>
+<th>Total cost</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1 2 3</td>
+<td>8 + 4 = 12</td>
+</tr>
+<tr class="even">
+<td>1 3 2</td>
+<td>11 + 6 = 17</td>
+</tr>
+<tr class="odd">
+<td>2 1 3</td>
+<td>12 + 11 = 23</td>
+</tr>
+<tr class="even">
+<td>2 3 1</td>
+<td>4 + 3 = 7</td>
+</tr>
+<tr class="odd">
+<td>3 1 2</td>
+<td>3 + 8 = 11</td>
+</tr>
+<tr class="even">
+<td>3 2 1</td>
+<td>6 + 12 = 18</td>
+</tr>
+</tbody>
+</table>
+<p>The lowest-cost ordering of 3 programs is <span class="math inline">\(2, 3, 1\)</span></p>
 
 
 
