@@ -313,7 +313,7 @@ $(document).ready(function () {
 <blockquote>
 <p>Suppose that there are <span class="math inline">\(n\)</span> phone booths in a region and we wish to visit each of them twice, but not in two consecutive times. Discuss the computational complexity of a naive algorithm for finding an order of visits that minimizes the total travel time.</p>
 </blockquote>
-<p>A naive algorithm is to generate all permutations of <span class="math inline">\(2n\)</span> booths, discard the ones which have at least one booth as consecutive positions, and compute the total travel time for the remaining ones. Assuming the time taken to compute total travel time for a given ordering is <span class="math inline">\(2n\)</span> and the number of such permutations is <span class="math inline">\(\frac{(2n)!}{2^n}\)</span> then the total time for the algorithm would be <span class="math inline">\(2n \cdot \frac{(2n)!}{2^n}\)</span>.</p>
+<p>A naive algorithm is to generate all permutations of <span class="math inline">\(2n\)</span> booths, discard the ones which have at least one booth as consecutive positions (assume the cost of this is 0), and compute the total travel time for the remaining ones. Assuming the time taken to compute total travel time for a given ordering is <span class="math inline">\(2n\)</span> and the number of such permutations is <span class="math inline">\(\frac{(2n)!}{2^n}\)</span> then the total time for the algorithm would be <span class="math inline">\(2n \cdot \frac{(2n)!}{2^n}\)</span>.</p>
 
 
 

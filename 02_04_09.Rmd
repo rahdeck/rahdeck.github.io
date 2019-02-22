@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = FALSE)
 > 
 > $x_1x_2...x_nx_1x_2...x_n$,
 >
-> where $x_1x_2...x_n$ is in $L$. For instance, if $L = \{00, 10\}$, then $\hat{L}$ = \{0000, 1010\}. Consider the following Algorithm $B$ for determining, given a bit string $y = y_1y_2...y_{2n}$ of length $2n$, whether or not it is in $\hat{L}$. First, determine if $y$ is of the form $x_1x_2...x_nx_1x_2...x_n$. This is easy to check. Assume for the sake of discussion that it takes essentially 0 seconds to answer this question. If $y$ is not of the proper form, stop and say that $y$ is not in $\hat{L}$. If $y$ is of the proper form, check if the first $n$ digits of $y$ form a bit string in $L$.
+> where $x_1x_2...x_n$ is in $L$. For instance, if $L = \{00, 10\}$, then $\hat{L} = \{0000, 1010\}$. Consider the following Algorithm $B$ for determining, given a bit string $y = y_1y_2...y_{2n}$ of length $2n$, whether or not it is in $\hat{L}$. First, determine if $y$ is of the form $x_1x_2...x_nx_1x_2...x_n$. This is easy to check. Assume for the sake of discussion that it takes essentially 0 seconds to answer this question. If $y$ is not of the proper form, stop and say that $y$ is not in $\hat{L}$. If $y$ is of the proper form, check if the first $n$ digits of $y$ form a bit string in $L$.
 
 > (a) Compute the worst-case complexity of Algorithm $B$.
 
@@ -21,10 +21,12 @@ It is when the string is in $\hat{L}$ when the worst case happens and its comple
 
 There are a total of $2^{2n}$ bit strings of length $2n$. There are $2^n$ strings in the proper form and $2^{2n} - 2^n$ strings not in the proper form.
 
-We can compute the average case complexity as the sum of the product of the number of properly formed strings times the complexity of A and the product of the number of strings not in the proper form times 0 divided by total number of all possible strings:
+We can compute the average case complexity as the sum of the product of the number of properly formed strings times the (constant) complexity of $A$ and the product of the number of strings not in the proper form times 0 (also constant), divided by total number of all possible strings:
 
 $$\frac{2^n \cdot 2^n + (2^{2n} -2^n) \cdot 0}{2^{2n}} = \frac{2^{2n}}{2^{2n}} = 1$$
 
 > (c) Do your answers suggest that average-case complexity might not be a good measure? Why?
 
-The average case complexity is actually lower than worst-case complexity. This is because there are many more strings not in the proper form, which take 0 seconds to check, bringing the average way down.
+The average case complexity is a constant. This is because there are many more strings not in the proper form, which take 0 seconds to check, bringing the average way down. 
+This can be misleading if stated as such, without giving details on how it was calculated, as it is very different than the average-case complexity of the subalgorithm ($A$).
+Also, if most of the input strings are in $\hat{L}$, then the complexity will be not a constant but $2^n$.
