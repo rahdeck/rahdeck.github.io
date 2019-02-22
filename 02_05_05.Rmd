@@ -1,0 +1,27 @@
+---
+title: "Exercise 2.5.5"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> If a campus telephone extension has four digits, how many different extensions are
+there with no repeated digits:
+>
+> (a) If the first digit cannot be 0?
+
+We can pick the first digit out of 9 digits (since we cannot use 0) and the three remaining ones also from 9 digits (this time 0 is included but the digit the we picked for the first position cannot be used so we still have 9 choices):
+
+$$9 \cdot P(9, 3) = 9 \cdot 9 \cdot 8 \cdot 7 = `r n <- 9 * prod(7:9); n`$$
+
+>(b) If the first digit cannot be 0 and the second cannot be 1?
+
+
+We sum up two cases:
+
+1. The first digit is 1, then we have 9 choices for the second one, 8 choices for the third one and 7 choices for the fourth one: $1 \cdot 9 \cdot 8 \cdot 7 = `r a <- prod(7:9); a`$.
+1. The first digit is between 2 and 9 (8 choices), then we have 8 choices for the second one (cannot be 1 or the same as the first digit), 8 choices for the third one (cannot be the same as the first two digits) and 7 choices for the fourth one: $8 \cdot 8 \cdot 8 \cdot 7 = `r b <- 8 * 8 * 8 * 7; b`$
+
+for the total of $`r n <- sum(a, b); n`$

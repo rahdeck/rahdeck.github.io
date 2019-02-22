@@ -1,0 +1,29 @@
+---
+title: "Exercise 2.5.3"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> Let $A = \{a, b, c, d, e, f, g, h\}$.
+>
+> (a) Find the number of sequences of length 4 using elements of $A$.
+
+The number of elements in $A$ is 8, so we expect $8^4 = `r n <- 8^4; n`$ sequences.
+
+> (b) Repeat part (a) if no letter is repeated.
+
+$P(8,4) = 8 \cdot 7 \cdot 6 \cdot 5 = `r n <- prod(5:8); n`$.
+
+
+> (c) Repeat part (a) if the first letter in the sequence is $b$.
+
+Only 3 positions remain so $8^3 = `r n <- 8^3; n`$.
+
+
+> (d) Repeat part (a) if the first letter is $b$ and the last is $d$ and no letters are
+repeated.
+
+There are only 6 remaining elements in $A$ (since $b$ and $d$ are already used) for the 2 remaining positions so $P(6,2) = 6 \cdot 5 = `r n <- 6*5; n`$

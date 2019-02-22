@@ -1,0 +1,27 @@
+---
+title: "Exercise 2.5.2"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> Let $A = \{1, 5, 9, 11, 15, 23\}$
+>
+> (a) Find the number of sequences of length 3 using elements of A.
+
+Since elements can repeat we have: $6^3 = `r n <- 6^3; n`$
+
+> (b) Repeat part (a) if no element of A is to be used twice.
+
+$P(6,3) = 6 \cdot 5 \cdot 4 = `r n <- prod(4:6); n`$
+
+> (c) Repeat part (a) if the first element of the sequence is 5.
+
+Since $5$ is fixed in the first position the two remaining positions can be filled with any of the six elements: $6^2 = `r n <- 6^2; n`$
+
+
+> (d) Repeat part (a) if the first element of the sequence is 5 and no element of A is used twice.
+
+$P(5,2) = 5 \cdot 4 = `r n <- 5*4; n`$

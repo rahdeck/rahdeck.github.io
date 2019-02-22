@@ -1,0 +1,13 @@
+---
+title: "Exercise 2.5.4"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> In how many different orders can we schedule the first five interviews if we need to
+schedule interviews with 20 job candidates?
+
+$P(20,5) = 20 \cdot 19 \cdot 18 \cdot 17 \cdot 16 = `r n <- prod(16:20); n`$

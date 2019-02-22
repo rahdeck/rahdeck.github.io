@@ -1,0 +1,14 @@
+---
+title: "Exercise 2.5.6"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> A typical combination lock or padlock has 40 numbers on its dial, ranging from 0 to 39. It opens by turning its dial clockwise, then counterclockwise, then clockwise, stopping each time at specific numbers. How many different padlocks can a company manufacture?
+
+For each choice we have 40 possibilities:
+
+$$40^3 = `r n <- 40^3; n`$$
