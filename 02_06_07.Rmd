@@ -1,0 +1,18 @@
+---
+title: "Exercise 2.6.7"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> A **value function** on a set $A$ assigns 0 or 1 to each subset of $A$.
+>
+> (a) If $A$ has 3 elements, how many different value functions are there on $A$?
+
+There are $2^3 = `r n <- 2^3; n`$ subsets of $A$. If each of them can be either 0 or 1, then there are $2^{2^3} = `r n <- 2^(2^3); n`$ different value functions on $A$.
+
+> (b) What if $A$ has $n$ elements?
+
+$2^{2^n}$

@@ -1,0 +1,18 @@
+---
+title: "Exercise 2.6.8"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> In a simple game (see Section 2.15), every subset of players is identified as either winning or losing.
+>
+> (a) If there is no restriction on this identification, how many distinct simple games are there with 3 players?
+
+There are $2^3 = `r n <- 2^3; n`$ subsets. Since there are two choices for each of the subsets, there are $2^{2^3} = `r n <- 2^(2^3); n`$ distinct simple games.
+
+> (b) With $n$ players?
+
+There are $2^{2^n}$ distinct games.

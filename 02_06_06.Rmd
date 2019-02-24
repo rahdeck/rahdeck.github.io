@@ -1,0 +1,12 @@
+---
+title: "Exercise 2.6.6"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> If $A$ is a set of 8 elements, how many subsets of more than one element does $A$ have?
+
+There are $2^8 = `r n <- 2^8; n`$ subsets of $A$ in total. We need to subtract the empty set and 8 one-element sets for the total of $2^8 - 1 - 8 = `r n <- 2^8 - 1 - 8; n`$.

@@ -1,0 +1,12 @@
+---
+title: "Exercise 2.6.2"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> A magazine subscription service deals with 35 magazines. A subscriber may order any number of them. The subscription service is trying to computerize its billing procedure and wishes to assign a different computer key (identification number) to two different people unless they subscribe to exactly the same magazines. How much storage is required; that is, how many different code numbers are needed?
+
+There can be $2^{35}$ different subsets (subscriptions) of 35 magazines, assuming we allow subscribers with 0 subscriptions. If not, then $2^{35}-1$ is enough.

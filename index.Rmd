@@ -11,9 +11,9 @@ title: "Applied Combinatorics solutions"
 * Section 2.3: [1](02_03_01.html), [2](02_03_02.html), [3](02_03_03.html), [4](02_03_04.html), [5](02_03_05.html), [6](02_03_06.html), [7](02_03_07.html), [8](02_03_08.html), [9](02_03_09.html)
 * Section 2.4: [1](02_04_01.html), [2](02_04_02.html), [3](02_04_03.html), [4](02_04_04.html), [5](02_04_05.html), [6](02_04_06.html), [7](02_04_07.html), [8](02_04_08.html), [9](02_04_09.html)
 * Section 2.5: [1](02_05_01.html), [2](02_05_02.html), [3](02_05_03.html), [4](02_05_04.html), [5](02_05_05.html), [6](02_05_06.html)
-* Section 2.6: COMING SOON!
+* Section 2.6: [1](02_06_01.html), [2](02_06_02.html), [3](02_06_03.html), [4](02_06_04.html), [5](02_06_05.html), [6](02_06_06.html), [7](02_06_07.html), [8](02_06_08.html)
+* Section 2.7: COMING SOON!
 <!--- 
-* Section 2.7:
 * Section 2.8:
 * Section 2.9:
 * Section 2.10:

@@ -1,0 +1,12 @@
+---
+title: "Exercise 2.6.4"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> Suppose that the pizza shop of Example 2.20 adds a new possible topping, sardines, but insists that each pizza either have sardines or have anchovies. How many possible varieties of pizza does the shop now offer?
+
+There are 10 toppings in total. There are $2^8 = `r n <- 2^8; n`$ pizzas with sardines + any subset of remaining 8 toppings (excluding anchovies since we cannot have sardines and anchovies in the same pizza) and $2^8 = `r n <- 2^8; n`$ pizzas with anchovies + any subset of remaining 8 toppings (excluding sardines, since we cannot have anchovies and sardines in the same pizza) for the total of $2 \cdot 2^8 = 2^9 = `r n <- 2^9; n`$ varieties of pizza.

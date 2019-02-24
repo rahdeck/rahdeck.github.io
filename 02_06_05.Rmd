@@ -1,0 +1,12 @@
+---
+title: "Exercise 2.6.5"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> If A is a set of 10 elements, how many nonempty subsets does $A$ have?
+
+There are $2^{10} = `r n <- 2^10; n`$ subsets of $A$, including an empty set, so we need to subtract it for the total of $2^{10} - 1 = `r n <- 2^10 - 1; n`$.

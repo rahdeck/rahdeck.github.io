@@ -1,0 +1,12 @@
+---
+title: "Exercise 2.6.3"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> If the pizza shop of Example 2.20 decides to always put onions and mushrooms on its pizzas, how many different varieties can the shop now offer?
+
+That leaves 7 optional toppings for the total of $2^7 = `r n <- 2^7; n`$ different varieties of pizza.
