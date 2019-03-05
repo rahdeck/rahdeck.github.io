@@ -48,9 +48,9 @@ $$9! = `r n <- factorial(9); n`$$
 
 > ii) The C++ programs must be run consecutively.
 
-We permute 6 elements (5 JAVA programs + 1 C++ block) and for each of those permutations we also permute the 4 programs within the C++ block and the 5 programs within the JAVA block for the total of:
+We permute 6 elements (5 JAVA programs + 1 C++ block) and for each of those permutations we also permute the 4 programs within the C++ block for the total of:
 
-$$6!5!4! = `r factorial(6) * factorial(5) * factorial(4); n`$$
+$$6!4! = `r n <- factorial(6) * factorial(4); n`$$
 
 > iii) The C++ programs must be run consecutively and the JAVA programs must be run consecutively.
 
