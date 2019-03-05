@@ -1,0 +1,12 @@
+---
+title: "Exercise 2.7.2"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> How many ways can 7 award winners be chosen from a group of 50 nominees?
+
+$$\binom{50}{7} = `r n <- choose(50, 7); n`$$

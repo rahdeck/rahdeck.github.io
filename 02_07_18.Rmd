@@ -1,0 +1,36 @@
+---
+title: "Exercise 2.7.18"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> A certain company has 30 female employees, including 3 in the management ranks, and 150 male employees, including 12 in the management ranks. A committee consisting of 3 women and 3 men is to be chosen. How many ways are there to choose the committee if:
+>
+> (a) It includes at least 1 person of management rank of each gender?
+
+We can pick female employees in the following way: pick any 3 female employees in $\binom{30}{3} = `r n <- choose(30,3); n`$ ways. Since $\binom{27}{3} = `r n <- choose(27,3); n`$ choices will include 3 non-management rank employees, we need to exclude those choices from the total (so that we get at least one management rank female employee) to get:
+
+$$\binom{30}{3} - \binom{27}{3} = `r n <- choose(30,3) - choose(27,3); n`$$
+
+We do the same for male employees:
+
+$$\binom{150}{3} - \binom{138}{3} = `r n <- choose(150,3) - choose(138,3); n`$$
+
+The grand total is the product of the number of ways to pick female and male employees:
+
+$$\left(\binom{30}{3} - \binom{27}{3}\right) \cdot \left(\binom{150}{3} - \binom{138}{3}\right) = `r n <- (choose(30,3) - choose(27,3)) * (choose(150,3) - choose(138,3)); n`$$
+
+> (b) It includes at least 1 person of management rank?
+
+We can use a similar method to the one above. First, let's pick any 3 female employees and any 3 male employees for the total of:
+
+$$\binom{30}{3} \cdot \binom{150}{3} = `r n <- choose(30,3) * choose(150,3); n`$$
+
+Many of those choices, however, don't include any management rank person so we need to subtract such choices from the total. There are a total of:
+
+$$\binom{27}{3} \cdot \binom{138}{3} = `r n <- choose(27,3) * choose(138, 3); n`$$ such choices so the final result is:
+
+$$\left(\binom{30}{3} \cdot \binom{150}{3}\right) - \left(\binom{27}{3} \cdot \binom{138}{3}\right) = `r n <- (choose(30,3) * choose(150,3)) - (choose(27,3) * choose(138, 3)); n`$$

@@ -1,0 +1,23 @@
+---
+title: "Exercise 2.7.19"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> Consider the identity
+> $$\binom{n}{m}\binom{m}{k} = \binom{n}{k}\binom{n-k}{m-k}$$
+>
+> (a) Prove this identity using an "algebraic" proof.
+
+$$\binom{n}{m}\binom{m}{k} = \frac{n!}{m!(n-m)!} \cdot \frac{m!}{k!(m-k)!} = \frac{n!}{k!(n-m)!(m-k)!}$$
+
+$$\binom{n}{k}\binom{n-k}{m-k} = \frac{n!}{k!(n-k)!} \cdot \frac{(n-k)!}{(m-k)!\left((n-k)-(m-k)\right)!} = \frac{n!}{k!(n-k)!} \cdot \frac{(n-k)!}{(m-k)!(n-m)!} = \frac{n!}{k!(n-m)!(m-k)!}$$
+
+So both end results are equal.
+
+> (b) Prove this identity using a "combinatorial" proof.
+
+TBD

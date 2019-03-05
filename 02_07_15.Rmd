@@ -1,0 +1,13 @@
+---
+title: "Exercise 2.7.15"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> How many odd numbers between 1000 and 9999 have distinct digits?
+
+For each of the 5 final digits that make the number odd ($\{1, 3, 5, 7, 9\}$) we can pick the first digit out of 8 (we exclude the final digit and 0, since the number cannot start with 0). The second and third digits can be picked from the remaining 8 digits (excluding the digit picked for the first position and the final digit, but including 0 this time) in $8 \cdot 7 = `r n <- 8 * 7; n`$ ways, for the total of $5 \cdot 8 \cdot 8 \cdot 7 = `r n <- 5 * 8 * 8 * 7; n`$ numbers.
+

@@ -1,0 +1,14 @@
+---
+title: "Exercise 2.7.10"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> Repeat Exercise 9 for $C(7, 5)$, $C(6, 4)$, and $C(6, 5)$.
+
+$$C(7, 2) = \binom{7}{2} = \frac{7 \cdot 6}{2 \cdot 1} = 21$$
+
+$$C(6, 4) + C(6, 5) = \binom{6}{4} + \binom{6}{5} = \frac{6 \cdot 5 \cdot 4 \cdot 3}{4 \cdot 3 \cdot 2 \cdot 1} + \frac{6 \cdot 5 \cdot 4 \cdot 3 \cdot 2}{5 \cdot 4 \cdot 3 \cdot 2 \cdot 1} = 15 + 6 = 21$$

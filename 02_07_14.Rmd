@@ -1,0 +1,29 @@
+---
+title: "Exercise 2.7.14"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> How many 8-letter words with no repeated letters can be constructed using the 26 letters of the alphabet if each word contains 3, 4, or 5 vowels?
+
+```{r}
+vowels = c('a', 'e', 'i', 'o', 'u')
+vowel_count <- length(vowels)
+consonant_count <- length(letters) - vowel_count
+vowels_string <- paste(vowels, collapse = ', ')
+```
+
+There are `r length(letters)` letters in the English language, including 5 vowels: $\{`r vowels_string`\}$.
+
+Let's split up the cases:
+
+1. Words with 3 vowels. We can choose 3 vowels in $\binom{`r vowel_count`}{3} = `r n <- choose(vowel_count, 3); n`$ ways. The remaining 5 letters can be chosen from the remaining `r consonant_count` letters (only consonants) in $\binom{`r consonant_count`}{5} = `r n <- choose(consonant_count,5); n`$ ways. That gives us a total of $\binom{`r vowel_count`}{3} \cdot \binom{`r consonant_count`}{5} = `r n <- choose(vowel_count,3) * choose(consonant_count,5); n`$ ways to pick the 8 letters. Those 8 letters can be permuted in $8! = `r n <- factorial(8); n`$ ways for the total of $\binom{`r vowel_count`}{3} \cdot \binom{`r consonant_count`}{5} \cdot 8! = `r n <- choose(vowel_count,3) * choose(consonant_count, 5) * factorial(8); n`$ ways.
+1. Words with 4 vowels. We can choose 4 vowels in $\binom{`r vowel_count`}{4} = `r n <- choose(vowel_count, 4); n`$ ways. The remaining 4 letters can be chosen from the remaining `r consonant_count` letters (only consonants) in $\binom{`r consonant_count`}{4} = `r n <- choose(consonant_count,4); n`$ ways. That gives us a total of $\binom{`r vowel_count`}{4} \cdot \binom{`r consonant_count`}{4} = `r n <- choose(vowel_count,4) * choose(consonant_count,4); n`$ ways to pick the 8 letters. Those 8 letters can be permuted in $8! = `r n <- factorial(8); n`$ ways for the total of $\binom{`r vowel_count`}{4} \cdot \binom{`r consonant_count`}{4} \cdot 8! = `r n <- choose(vowel_count,4) * choose(consonant_count, 4) * factorial(8); n`$ ways.
+1. Words with 5 vowels. We can choose 5 vowels in $\binom{`r vowel_count`}{5} = `r n <- choose(vowel_count, 5); n`$ ways. The remaining 3 letters can be chosen from the remaining `r consonant_count` letters (only consonants) in $\binom{`r consonant_count`}{3} = `r n <- choose(consonant_count,3); n`$ ways. That gives us a total of $\binom{`r vowel_count`}{5} \cdot \binom{`r consonant_count`}{3} = `r n <- choose(vowel_count,5) * choose(consonant_count,3); n`$ ways to pick the 8 letters. Those 8 letters can be permuted in $8! = `r n <- factorial(8); n`$ ways for the total of $\binom{`r vowel_count`}{5} \cdot \binom{`r consonant_count`}{3} \cdot 8! = `r n <- choose(vowel_count,5) * choose(consonant_count, 3) * factorial(8); n`$ ways.
+
+The grand total is the sum of the partial sums:
+
+$$\binom{`r vowel_count`}{3} \cdot \binom{`r consonant_count`}{5} \cdot 8! + \binom{`r vowel_count`}{4} \cdot \binom{`r consonant_count`}{4} \cdot 8! + \binom{`r vowel_count`}{5} \cdot \binom{`r consonant_count`}{3} \cdot 8! = `r n <- choose(vowel_count,3) * choose(consonant_count, 5) * factorial(8) + choose(vowel_count,4) * choose(consonant_count, 4) * factorial(8) + choose(vowel_count,5) * choose(consonant_count, 3) * factorial(8); n`$$

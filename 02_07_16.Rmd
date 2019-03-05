@@ -1,0 +1,47 @@
+---
+title: "Exercise 2.7.16"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> A fleet is to be chosen from a set of 7 different make foreign cars and 4 different make domestic cars. How many ways are there to form the fleet if:
+>
+>(a) The fleet has 5 cars, 3 foreign and 2 domestic?
+
+$$\binom{7}{3} \cdot \binom{4}{2} = `r n <- choose(7,3) * choose(4,2); n`$$
+
+> (b) The fleet can be any size (except empty), but it must have equal numbers of foreign and domestic cars?
+
+There are only 4 domestic cars so the biggest fleet can be 8, if there's to be an equal number of foreign and domestic cars. It also means the sizes of the fleet will be 2, 4, 6 and 8 for 1, 2, 3 and 4 domestic and foreign cars, respectively. The total number of ways of doing it is:
+
+$$\binom{7}{1} \cdot \binom{4}{1} + \binom{7}{2} \cdot \binom{4}{2} + \binom{7}{3} \cdot \binom{4}{3} + \binom{7}{4} \cdot \binom{4}{4}= `r n <- choose(7,1) * choose(4,1) + choose(7,2) * choose(4,2) + choose(7,3) * choose(4,3) + choose(7,4) * choose(4,4); n`$$
+
+> (c) The fleet has 4 cars and 1 of them must be a Chevrolet?
+
+Assuming Chevrolet is a domestic make, we can pick from the 3 remaining domestic makes (since it's a set there are no more Chevrolets in there) and from 7 foreign ones. We can split the cases and then sum up their totals:
+
+1. We pick only domestic makes (recall that Chevrolet is already fixed, so we pick from the 3 remaining domestic cars) :
+$$\binom{3}{3} = `r n <- choose(3,3); n`$$
+1. We pick 3 domestic cars and 1 foreign car:
+$$\binom{3}{2} \cdot \binom{7}{1} = `r n <- choose(3,2) * choose(7,1); n`$$
+1. We pick 2 domestic cars and 2 foreign cars:
+$$\binom{3}{1} \cdot \binom{7}{2} = `r n <- choose(3,1) * choose(7,2); n`$$
+1. We pick 1 domestic car (already fixed to be a Chevrolet) and 3 foreign cars:
+$$1 \cdot \binom{7}{3} = `r n <- choose(7,3); n`$$
+for the total of:
+$$\binom{3}{3} + \binom{3}{2} \cdot \binom{7}{1} + \binom{3}{1} \cdot \binom{7}{2} + 1 \cdot \binom{7}{3} = `r n <- choose(3,3) +choose(3,2) * choose(7,1) + choose(3,1) * choose(7,2) + choose(7,3); n`$$
+ways of composing the fleet.
+
+Alternatively, you can very much simplify this long calculation and notice (like authors did in their answer) that we fix 1 of 11 brands so we're left 10 brands of which we need to pick 3 brands:
+
+$$\binom{10}{3} = `r n <- choose(10, 3); n`$$
+
+>(d) The fleet has 4 cars, 2 of each kind, and a Chevrolet and Honda cannot both be in the fleet?
+
+There are a total $\binom{7}{2} \cdot \binom{4}{2} = `r n <- choose(7,2) * choose(4,2); n`$ ways of having 2:2 fleet but they include Chevrolet and Honda in the same fleet. So, we need to subtract from those all the cases where Chevrolet and Honda are in the fleet. There are $\binom{6}{1} \cdot \binom{3}{1} = `r n <- choose(6,1) * choose(3,1); n`$ such cases for the total of:
+
+$$\binom{7}{2} \cdot \binom{4}{2} - \binom{6}{1} \cdot \binom{3}{1} = `r n <- choose(7,2) * choose(4,2) - choose(6,1) * choose(3,1); n`$$
+ways of composing such fleet.

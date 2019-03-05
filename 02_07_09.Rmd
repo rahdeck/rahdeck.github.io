@@ -1,0 +1,15 @@
+---
+title: "Exercise 2.7.9"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> Compute $C(5, 3)$, $C(4, 2)$, and $C(4, 3)$ and verify that formula (2.3) holds.
+
+$$C(5, 3) = \binom{5}{3} = \frac{5 \cdot 4 \cdot 3}{3 \cdot 2 \cdot 1} = 10$$
+
+$$C(4, 2) + C(4,3) = \binom{4}{2} + \binom{4}{3} = \frac{4 \cdot 3}{2 \cdot 1} + \frac{4 \cdot 3 \cdot 2}{3 \cdot 2 \cdot 1} = 6 + 4 = 10$$
+

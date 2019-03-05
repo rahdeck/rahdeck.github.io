@@ -1,0 +1,20 @@
+---
+title: "Exercise 2.7.11"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> (a) In how many ways can 8 blood samples be divided into 2 groups to be sent to different laboratories for testing if there are 4 samples in each group? Assume that the laboratories are distinguishable.
+
+Picking 4 samples from 8 for one of the groups can be done in $\binom{8}{4} = \frac{8 \cdot 7 \cdot 6 \cdot 5}{4 \cdot 3 \cdot 2 \cdot 1} = 70$ ways. The remaining 4 samples also automatically constitute the second group. For example if we pick $\{1, 2, 3, 4\}$ for the first group, then the second group automatically gets the 4 remaining samples, in this case: $\{5, 6, 7, 8\}$. Later, when we pick $\{5, 6, 7, 8\}$ for the first group, the second group will get $\{1, 2, 3, 4\}$. So, we do not need to multiply by 2 as $\binom{8}{4}$ already accounts for each possible group of 4 samples going to both laboratories.
+
+> (b) In how many ways can 8 blood samples be divided into 2 groups to be sent to different laboratories for testing if there are 4 samples in each group? Assume that the laboratories are indistinguishable.
+
+This can be done in $\frac{\binom{8}{4}}{2} = `r n <- choose(8, 4)/2; n`$ ways (half the count of case a))
+
+> (c) In how many ways can the 8 samples be divided into 2 groups if there is at least 1 item in each group? Assume that the laboratories are distinguishable.
+
+There are $2^{8} - 2 = `r n <- 2^8 - 2; n`$ subsets of 8 elements, excluding an empty set and a set with all 8 elements. Similarly to case a) above, we do not need to multiply by 2.

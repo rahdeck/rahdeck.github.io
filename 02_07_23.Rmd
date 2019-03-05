@@ -1,0 +1,14 @@
+---
+title: "Exercise 2.7.23"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> Prove the following identity (using a combinatorial proof if possible). The identity is called Vandermonde's identity.
+
+$$\binom{n+m}{r} = \binom{n}{0}\binom{m}{r} + \binom{n}{1}\binom{m}{r-1} + \binom{n}{2}\binom{m}{r-2} + ... + \binom{n}{r}\binom{m}{0}$$
+
+TBD

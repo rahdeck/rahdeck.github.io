@@ -1,0 +1,12 @@
+---
+title: "Exercise 2.7.1"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> How many ways are there to choose 5 starters (independent of position) from a basketball team of 10 players?
+
+$$\binom{10}{5} = `r n <- choose(10,5); n`$$

@@ -1,0 +1,12 @@
+---
+title: "Exercise 2.7.20"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> Give an alternative "combinatorial" proof of Corollary 2.1.2 by using the definition of $C(n, r)$.
+
+Everytime we are picking $n-r$ objects from $n$ we are also implicitly picking $r$ objects (simply by leaving them aside) so the number of ways must be equal.

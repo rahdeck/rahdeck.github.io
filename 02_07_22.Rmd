@@ -1,0 +1,29 @@
+---
+title: "Exercise 2.7.22"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> Show that
+> $$\binom{n}{0} + \binom{n+1}{1} + ... + \binom{n+r}{r} = \binom{n+r+1}{r}$$
+
+We can try and show this via an algebraic [inductive proof](https://en.wikipedia.org/wiki/Mathematical_induction).
+
+1.  The base case
+    $$\binom{n}{0} + \binom{n+1}{1} = \frac{n!}{0!n!} + \frac{(n+1)!}{1!n!} = 1 + (n+1) = n + 2$$
+    $$\binom{n+2}{1} = \frac{(n+2)!}{1!(n+1)!} = n + 2$$
+    We can see that the base case confirms the identity.
+1.  Inductive step
+
+    Assume that the formula holds for $r$ and show that it also holds for $r + 1$.
+    $$\binom{n}{0} + \binom{n+1}{1} + ... + \binom{n+r}{r} + \binom{n+r+1}{r+1}$$
+    We can rewrite the sum without the last element (i.e $\binom{n}{0} + \binom{n+1}{1} + ... + \binom{n+r}{r}$) as $\binom{n+r+1}{r}$. Then we reduce the expression to:
+    $$\binom{n+r+1}{r} + \binom{n+r+1}{r+1} = \frac{(n+r+1)!}{r!(n+1)!} + \frac{(n+r+1)!}{(r+1)!n!} = \frac{(r+1)(n+r+1)! + (n+1)(n+r+1)!}{(r+1)!(n+1)!} = \frac{(n+r+1)!(n+r+2)}{(r+1)!(n+1)!} = \frac{(n+r+2)!}{(r+1)!(n+1)!}$$
+    And observe that this is equal to:
+    $$\binom{n+r+2}{r+1} = \frac{(n+r+2)!}{(r+1)!(n+1)!}$$
+    so we conclude that:
+    $$\binom{n+r+1}{r} + \binom{n+r+1}{r+1} = \binom{n+r+2}{r+1}$$
+    which is what we set out to prove. QED.

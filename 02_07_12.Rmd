@@ -1,0 +1,18 @@
+---
+title: "Exercise 2.7.12"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+*Please note that my solution differs from the authors' one (though in a trivial way only) given at the end*
+ 
+> A company is considering 6 possible new computer systems and its systems manager would like to try out at most 3 of them. In how many ways can the systems manager choose the systems to be tried out?
+
+$$\binom{6}{1} + \binom{6}{2} + \binom{6}{3} = \frac{6}{1} + \frac{6 \cdot 5}{2 \cdot 1} + \frac{6 \cdot 5 \cdot 4}{3 \cdot 2 \cdot 1} = 6 + 15 + 20 = 41$$
+
+*Authors' answer*:
+$$\binom{6}{0} + \binom{6}{1} + \binom{6}{2} + \binom{6}{3} = \frac{1}{1} + \frac{6}{1} + \frac{6 \cdot 5}{2 \cdot 1} + \frac{6 \cdot 5 \cdot 4}{3 \cdot 2 \cdot 1} = 1 + 6 + 15 + 20 = 42$$[^1]
+
+[^1]: The authors' also count the case where the manager doesn't try out any systems, but for me it sounds like he didn't do his task :-)

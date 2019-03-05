@@ -1,0 +1,16 @@
+---
+title: "Exercise 2.7.13"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> (a) In how many ways can 10 food items be divided into 2 groups to be sent to different laboratories for purity testing if there are 5 items in each group?
+
+$$\binom{10}{5} = \frac{10 \cdot 9 \cdot 8 \cdot 7 \cdot 6}{5 \cdot 4 \cdot 3 \cdot 2 \cdot 1} = 252$$
+
+> (b) In how many ways can the 10 items be divided into 2 groups if there is at least 1 item in each group?
+
+$$2^{10} - 2 = `r n <- 2^10 - 2; n`$$ (we don't count an empty set and a 10-element set)

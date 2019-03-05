@@ -1,0 +1,17 @@
+---
+title: "Exercise 2.7.25"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> If $\genfrac{\langle}{\rangle}{0pt}{}{n}{r}$ is defined as in [Exercise 24](02_02_24.html), show that
+> $$\genfrac{\langle}{\rangle}{0pt}{}{n}{r} = \frac{n}{r}\genfrac{\langle}{\rangle}{0pt}{}{n+1}{r-1} = \frac{n+r-1}{r}\genfrac{\langle}{\rangle}{0pt}{}{n}{r-1}$$
+
+We can show that all three components of this equation can be reduced to the same result, thus are equal.
+
+1. $$\genfrac{\langle}{\rangle}{0pt}{}{n}{r} = \binom{n+r-1}{r} = \frac{(n+r-1)!}{r!(n-1)!}$$
+1. $$\frac{n}{r}\genfrac{\langle}{\rangle}{0pt}{}{n+1}{r-1} = \frac{n}{r}\frac{(n+r-1)!}{(r-1)!n!} = \frac{(n+r-1)!}{r!(n-1)!}$$
+1. $$\frac{n+r-1}{r}\genfrac{\langle}{\rangle}{0pt}{}{n}{r-1} = \frac{n+r-1}{r}\binom{n+r-2}{r-1} = \frac{n+r-1}{r}\frac{(n+r-2)!}{(r-1)!(n-1)!} = \frac{(n+r-1)!}{r!(n-1)!}$$

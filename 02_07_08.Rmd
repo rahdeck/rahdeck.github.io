@@ -1,0 +1,14 @@
+---
+title: "Exercise 2.7.8"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> Extend Figure 2.4 by adding one more row.
+
+Row for $n = 7$ is:
+
+$$1 \quad 7 \quad 21 \quad 35 \quad 35 \quad 21 \quad 7 \quad 1$$

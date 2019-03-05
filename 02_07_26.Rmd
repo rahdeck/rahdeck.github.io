@@ -1,0 +1,49 @@
+---
+title: "Exercise 2.7.26"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> A sequence of numbers $a_0, a_1, a_2, ...,  a_n$ is called *unimodal* if for some integer $t$, $a_0 \leq a_1 \leq ... \leq a_t$ and $a_t \geq a_{t+1} \geq ... \geq a_n$ . (Note that the entries in any row of Pascal's triangle increase for awhile and then decrease and thus form a unimodal sequence.)
+>
+> (a) Show that if $a_0, a_1, a_2, ..., a_n$ is unimodal, $t$ is not necessarily unique.
+
+As per its definition a valid unimodal sequence might consist of the same value at every position, e.g. $[1,1,1,1,1,1]$. Thus $t$ is not necessarily unique as elements at every index of the sequence are the "peak" values.
+
+> (b) Show that if $n > 0$, the sequence $\binom{n}{0}, \binom{n}{1}, \binom{n}{2}, ..., \binom{n}{n}$ is unimodal.
+
+Please see (c) below.
+
+> (c) Show that the largest entry in the sequence in part (b) is $\binom{n}{\lfloor{n/2}\rfloor}$, where $\lfloor{x}\rfloor$ is the greatest integer less than or equal to $x$.
+
+What follows is not a very rigorous proof but rather an explanation that mostly calls out to mathematical intuition and asks you to believe it's true :-)
+
+In $\binom{n}{r} = \frac{n!}{r!(n-r)!}$, what drives the result is the denominator as the numerator stays constant. Since the number of numbers that get multiplied by each other stays constant (and equal to $n$) in the denominator, what drives the denominator up (and makes the whole fraction smaller) is the magnitude of those numbers. Clearly, the higher numbers will be at the tail ends of the sequence and smallest in the middle of the sequence. 
+
+Hopefully an example can make it clearer. If we pick $n=10$ we have the following denominators:
+
+r   | denominator
+----|------------
+$0$ |$0! (1) \times 10! (10 \times ... \times 1)$
+$1$ |$1! (1) \times 9! (9 \times ... \times 1)$
+$2$ |$2! (2 \times 1) \times 8! (8 \times ... \times 1)$
+$3$ |$3! (3 \times ... \times 1) \times 7! (7 \times ... \times 1)$
+$4$ |$4! (4 \times ... \times 1) \times 6! (6 \times ... \times 1)$
+$5$ |$5! (5 \times ... \times 1) \times 5! (5 \times ... \times 1)$
+$6$ |$6! (6 \times ... \times 1) \times 4! (4 \times ... \times 1)$
+$7$ |$7! (7 \times ... \times 1) \times 3! (3 \times ... \times 1)$
+$8$ |$8! (8 \times ... \times 1) \times 2! (3 \times ... \times 1)$
+$9$ |$9! (9 \times ... \times 1 ) \times 1! (2 \times 1)$
+$10$|$10! (10 \times ... \times 1) \times 0! (1)$
+
+In each of these, there are $n$ terms multiplied together, but the smallest ones are in row for $r=5$, as it expands to:
+
+$$5 \times 4 \times 3 \times 2 \times 1 \times 5 \times 4 \times 3 \times 2 \times 1$$
+
+as opposed to say row for $n=3$ which expands to a much higher number:
+
+$$3 \times 2 \times 1 \times 7 \times 6 \times 5 \times 4 \times 3 \times 2 \times 1$$
+or any other row.

@@ -1,0 +1,65 @@
+---
+title: "Exercise 2.7.17"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> (a) A computer center has 9 different programs to run. Four of them use the language C++ and 5 use the language JAVA. The C++ programs are considered indistinguishable and so are the JAVA programs. Find the number of possible orders for running the programs if:
+>
+> i) There are no restrictions.
+
+We permute all 9 elements (assuming they're all different) but then divide the total by a product of permutations of C++ programs and JAVA programs for the total of:
+
+$$\frac{9!}{4!5!} = `r n <- factorial(9)/(factorial(4)*factorial(5)); n`$$
+The authors' answer is $\binom{9}{4} = `r n <- choose(9, 4); n`$ which is numerically the same as this, but it might be easier for some to reason about. The authors noticed that there are 9 "positions" in the sequence of programs to run, and they picked 4 of them out of 9 (to fix the C++ programs) which automatically fixes the remaining 5 positions for the JAVA programs. Alternatively, we could have picked the 5 positions for JAVA programs first: $\binom{9}{5} = `r n <- choose(9, 5); n`$
+
+> ii) The C++ programs must be run consecutively.
+
+We treat C++ programs as a single unit (block of 4 programs) and so now we have 6 (5 JAVA + 1 C++) program to permute, similarly to how we did in the previous example:
+
+$$\frac{6!}{5!1!} = `r n <- factorial(6)/(factorial(5)*factorial(1)); n`$$
+
+> iii) The C++ programs must be run consecutively and the JAVA programs must be run consecutively.
+
+We treat C++ programs as a single unit and JAVA programs as a single unit, so we have only two programs which we can arrange in:
+
+$$2! = 2$$ ways.
+
+That is either C++ run first, followed by JAVA programs, or the other way around.
+
+> iv) The languages must alternate.
+
+There is only one ordering in which it can happen: $J,C++,J,C++,J,C++,J,C++,J$
+
+> (b) Suppose that the cost of switching from a C++ configuration to a JAVA configuration is 10 units, the cost of switching from a JAVA configuration to a C++ configuration is 5 units, and there is no cost to switch from C++ to C++ or JAVA to JAVA. What is the most efficient (least cost) ordering in which to run the programs?
+
+That would be to run all JAVA programs consecutively first, followed by all C++ programs for the total cost of 5 units.
+
+> (c) Repeat part (a) if the C++ programs are all distinguishable from each other and so are the JAVA programs.
+>
+> i) There are no restrictions.
+
+Simply permute all 9 programs:
+
+$$9! = `r n <- factorial(9); n`$$
+
+> ii) The C++ programs must be run consecutively.
+
+We permute 6 elements (5 JAVA programs + 1 C++ block) and for each of those permutations we also permute the 4 programs within the C++ block and the 5 programs within the JAVA block for the total of:
+
+$$6!5!4! = `r factorial(6) * factorial(5) * factorial(4); n`$$
+
+> iii) The C++ programs must be run consecutively and the JAVA programs must be run consecutively.
+
+For the two orderings of the program blocks, we also permute elements within each block for the total of:
+
+$$2 \cdot 5!4! = `r n <- 2 * factorial(5) * factorial(4); n`$$
+
+> iv) The languages must alternate.
+
+Since there is only one ordering when programs are indistinguishable, we only permute programs within each block for the total of:
+
+$$5!4! = `r n <- factorial(5) * factorial(4); n`$$

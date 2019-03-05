@@ -1,0 +1,12 @@
+---
+title: "Exercise 2.7.20"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> How would you find the sum $\binom{n}{0} + \binom{n}{1} + \binom{n}{2} + ... + \binom{n}{n}$ from Pascal's triangle? Do so for $n$ = $2$, $3$, and $4$. Guess at the answer in general.
+
+For $n = 2$ it's $4$, for $n = 3$ it's $8$, for $n = 4$ it's $16$ so it certainly looks like the formula is $2^n$
