@@ -19,3 +19,5 @@ knitr::opts_chunk$set(echo = FALSE)
     Finally, we can see that both sides reduce to the same result.
 
 > (b) using a combinatorial proof
+
+TBD
