@@ -21,10 +21,11 @@ title: "Applied Combinatorics solutions"
 * Section 2.7 "$r$-Combinations":
     + [1](02_07_01.html), [2](02_07_02.html), [3](02_07_03.html), [4](02_07_04.html), [5](02_07_05.html), [6](02_07_06.html), [7](02_07_07.html), [8](02_07_08.html), [9](02_07_09.html) , [10](02_07_10.html), [11](02_07_11.html), [12](02_07_12.html), [13](02_07_13.html), [14](02_07_14.html), [15](02_07_15.html), [16](02_07_16.html), [17](02_07_17.html) , [18](02_07_18.html), [19](02_07_19.html), [20](02_07_20.html), [21](02_07_21.html), [22](02_07_22.html), [23](02_07_23.html), [24](02_07_24.html), [25](02_07_25.html), [26](02_07_26.html)
 * Section 2.8: "Probability":
-    + COMING SOON
+    + [1](02_08_01.html), [2](02_08_02.html), [3](02_08_03.html), [4](02_08_04.html), [5](02_08_05.html), [6](02_08_06.html), [7](02_08_07.html), [8](02_08_08.html), [9](02_08_09.html) , [10](02_08_10.html), [11](02_08_11.html), [12](02_08_12.html), [13](02_08_13.html), [14](02_08_14.html), [15](02_08_15.html), [16](02_08_16.html), [17](02_08_17.html)
+* Section 2.9: "Sampling with Replacement"
+    + COMING SOON!
    
 <!--- 
-* Section 2.9:
 * Section 2.10:
 * Section 2.11:
 * Section 2.12:
