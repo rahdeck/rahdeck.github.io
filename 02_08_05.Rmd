@@ -1,0 +1,12 @@
+---
+title: "Exercise 2.8.5"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> Calculate the probability that in four tosses of a fair coin, there are at most three heads.
+
+There are a total of $2^4 = `r n <- 2**4; n`$ possible outcomes. Only one of those has more than 3 heads, namely 4 heads. So we need to subtract it from the total number of outcomes and get the final probability of $\frac{2^4-1}{2^4} = \frac{`r n <- 2**4 - 1; n`}{`r n <- 2**4; n`}$.

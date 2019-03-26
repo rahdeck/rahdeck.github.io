@@ -1,0 +1,22 @@
+---
+title: "Exercise 2.8.14"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> Suppose that we have 10 different pairs of gloves. From the 20 gloves, 4 are chosen at random. What is the probability of getting at least one pair?
+
+*Please note that my solution differs from the authors' one given at the end*
+
+There are a total of $\binom{20}{4} = `r n <- choose(20, 4); n`$ possible outcomes. There are $10 \cdot \binom{18}{2} = `r n <- 10 * choose(18, 2); n`$ outcomes with at least one pair and $\binom{10}{2} = `r n <- choose(10, 2); n`$ outcomes with exactly two pairs, which were already counted in the first equation so need to be subtracted to get the final number of $10 \cdot \binom{18}{2} - \binom{10}{2} = `r n <- 10 * choose(18, 2) - choose(10, 2); n`$ outcomes. The final probability is thus $\frac{10 \cdot \binom{18}{2} - \binom{10}{2}}{\binom{20}{4}} = \frac{`r n <- 10 * choose(18, 2) - choose(10, 2); n`}{`r n <- choose(20, 4); n`} = \frac{99}{323}$.
+
+Alternatively, we can first count the number of outcomes that do not have a single pair in them. There are $\frac{20 \cdot 18 \cdot 16 \cdot 14}{4!} = `r n <- (20*18*16*14)/factorial(4); n`$ of them, so we need to subtract them from the total and divide by the total to get the same final probability of $\frac{\binom{20}{4} - \frac{20 \cdot 18 \cdot 16 \cdot 14}{4!}}{\binom{20}{4}} = \frac{`r n <- choose(20, 4) - (20*18*16*14)/factorial(4); n`}{`r n <- choose(20, 4); n`}$
+
+*Authors' answer*:
+
+$$\frac{\frac{20 \cdot 18 \cdot 16 \cdot 14}{4!}}{\binom{20}{4}}$$[^1]
+
+[^1]: The authors' calculation is the complement of my result and seems to give the probability of NOT getting any pairs.

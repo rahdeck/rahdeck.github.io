@@ -1,0 +1,18 @@
+---
+title: "Exercise 2.8.17"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> Repeat the problem in Example 2.22 when allergic reactions occur only in diets:
+> 
+> (a) Containing either tomatoes and corn or chocolate and peanuts
+
+There are $2^2$ diets containing tomatoes and corn and also $2^2$ diets containing chocolate and peanuts. They have overlap in one case only, i.e. when the diet contains all four ingredients. The final probability is thus $\frac{2^2 + 2^2 - 1}{2^4} = \frac{`r n <- 2^2 + 2^2 - 1;n`}{`r n <- 2^4; n`}$.
+
+> (b) Containing either tomatoes or all three other foods
+
+There are $2^3$ diets containing tomatoes and $2$ diets containing three other foods. The overlap is a single diet containing tomatoes and the three other foods so the total probability is $\frac{2^3 + 2 - 1}{2^4} = \frac{`r n <- 2^3 + 2 - 1; n`}{`r n <- 2^4; n`}$.

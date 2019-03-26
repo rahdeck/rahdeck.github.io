@@ -1,0 +1,12 @@
+---
+title: "Exercise 2.8.9"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> If a bit string of length 4 is chosen at random, what is the probability of having at least three 1's?
+
+There are a total of $2^4 = `r n <- 2^4; n`$ outcomes and there are $\binom{4}{3} + \binom{4}{4} = `r n <- choose(4,3) + choose(4,4); n`$ ways to have a string with at least three 1's in it, so the final probability is $\frac{5}{16}$

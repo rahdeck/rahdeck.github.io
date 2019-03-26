@@ -1,0 +1,12 @@
+---
+title: "Exercise 2.8.13"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> A medical lab can operate only if at least one licensed x-ray technician is present and at least one phlebotomist. There are three licensed x-ray technicians and two phlebotomists, and each worker is equally likely to show up for work on a given day or to stay home. Assuming that each worker decides independently whether or not to come to work, what is the probability that the lab can operate?
+
+There are a total of $2^5 = `r n <- 2^5; n`$ possible outcomes. From those we should subtract outcomes which don't contain an x-ray technician or a phlebotomist at all. There are $2^2$ outcomes that don't contain an x-ray technician and $2^3$ outcomes that don't contain a phlebotomist. Among those two sets of outcomes an outcome which contains no personell at all was counted twice so we need to subtract it to get the total $2^2 + 2^3 - 1 = `r n <- 2^2 + 2^3 - 1; n`$ outcomes. The final probability is thus $\frac{2^5 - (2^2 + 2^3 - 1)}{2^5} = \frac{`r n <- 2^5 - (2^2 + 2^3 - 1); n`}{`r n <- 2^5; n`}$

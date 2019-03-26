@@ -1,0 +1,30 @@
+---
+title: "Exercise 2.8.1"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> Are the outcomes in the following experiments equally likely?
+>
+> (a) A citizen of California is chosen at random and his or her town of residence is recorded.
+
+No. Most California residents live in a few big cities such as Los Angeles or San Francisco and they're more likely to be chosen.
+
+> (b) Two drug pills and three placebos (sugar pills) are placed in a container and one pill is chosen at random and its type is recorded.
+
+No. It's more likely that we choose a placebo.
+
+> (c) A snowflake is chosen at random and its appearance is recorded.
+
+Yes. Snowflakes are unique so each one is equally likely to appear.
+
+> (d) Two fair dice are tossed and the sum of the numbers appearing is recorded.
+
+No. The least likely outcomes are 2 (both dice come up 1) and 12 (both dice come up 6). The most likely outcome is 7 (can be thrown in 6 ways).
+
+> (e) A bit string of length 3 is chosen at random and the sum of its digits is observed.
+
+No. Bit strings with sum 0 (000) and 3 (111) are not as likely as e.g. a bit string with sum 1 (there are 3 such strings).

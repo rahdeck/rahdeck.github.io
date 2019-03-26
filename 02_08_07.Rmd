@@ -1,0 +1,12 @@
+---
+title: "Exercise 2.8.7"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> If a card is drawn at random from a deck of 52, what is the probability that it is a king or a queen?
+
+There are 4 kings and 4 queens in a deck, so the probability is $\frac{4 + 4}{52} = \frac{2}{13}$.

@@ -1,0 +1,12 @@
+---
+title: "Exercise 2.8.6"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> Calculate the probability that if a DNA chain of length 5 is chosen at random, it will have at least four A's.
+
+There are a total of $4^5 = `r n <- 4**5; n`$ outcomes. We are interested in chains that have 4 or 5 A's. Those can be formed in $\binom{5}{4} \cdot 3 + \binom{5}{5} = `r n <- choose(5,4) * 3 + choose(5,5); n`$ ways so the probability is $\frac{\binom{5}{4} \cdot 3 + \binom{5}{5}}{4^5} = \frac{`r n <- choose(5,4) * 3 + choose(5,5); n`}{`r n <- 4**5; n`} = \frac{1}{64}$

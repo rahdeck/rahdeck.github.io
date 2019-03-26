@@ -1,0 +1,12 @@
+---
+title: "Exercise 2.8.11"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> Suppose that a system has four independent components, each of which is equally likely to work or not to work. Suppose that the system works if and only if at least three components work. What is the probability that the system works?
+
+There are a total of $2^4 = `r n <- 2^4; n`$ states of the system. There are $\binom{4}{3} + \binom{4}{4} = `r n <- choose(4,3) + choose(4,4); n`$ states where at least three components work (the first part of the equation counts states where exactly three components work and the second part counts states where all components work, which is one case only). The final probability is $\frac{\binom{4}{3} + \binom{4}{4}}{2^4} = \frac{`r n <- choose(4,3) + choose(4,4);n`}{`r n <- 2^4; n`}$

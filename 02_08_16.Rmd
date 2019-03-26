@@ -1,0 +1,22 @@
+---
+title: "Exercise 2.8.16"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> Use the definition of probability to verify rules:
+> 
+> (a) (2.4)
+
+$\frac{n(S) - n(E)}{n(S)} = 1 - \frac{n(E)}{n(S)}$
+
+> (b) (2.5)
+
+$E$ and $F$ disjoint implies $n(E \cup F) = n(E) + n(F)$. So, probability of $E \cup F = \frac{n(E \cup F)}{n(S)} = \frac{n(E) + n(F)}{n(S)}$ and probability of $E$ $+$ probability of $F$ $=$ $\frac{n(E)}{n(S)} + \frac{n(F)}{n(S)}$.
+
+> (c) (2.6)
+
+$E$ and $F$ not disjoint implies $n(E \cup F) = n(E) + n(F) − n(E \cap F)$. So, probability of $E \cup F = \frac{n(E \cup F)}{n(S)} = \frac{n(E) + n(F) - n(E \cap F)}{n(S)}$ and probability of $E$ $+$ probability of $F$ $−$ probability of $E \cap F = \frac{n(E)}{n(S)} + \frac{n(F)}{n(S)} − \frac{n(E \cap F)}{n(S)}$.

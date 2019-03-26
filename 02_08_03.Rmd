@@ -1,0 +1,33 @@
+---
+title: "Exercise 2.8.3"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> Calculate the probability that a family of 3 children has:
+>
+> (a) Exactly 2 boys
+
+There are a total of 8 outcomes (B for boy, G for girl):
+
+1. BBB
+1. BBG
+1. BGB
+1. BGG
+1. GBB
+1. GBG
+1. GGB
+1. GGG
+
+Out of these there are 3 outcomes (#2, #3 and #5) that have exactly 2 boys so the probability is $\frac{3}{8}$
+
+> (b) At least 2 boys
+
+It's enough to add one outcome (all boys) to the result in a) to get 4 outcomes with the final probability of $\frac{4}{8} = \frac{1}{2}$
+
+> (c) At least 1 boy and at least 1 girl 
+
+We can exclude the 2 outcomes that have only boys (#1) or only girls (#8), for the total of 6 outcomes which gets us the probability of $\frac{6}{8} = \frac{3}{4}$

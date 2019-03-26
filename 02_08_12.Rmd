@@ -1,0 +1,12 @@
+---
+title: "Exercise 2.8.12"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> Repeat [Exercise 11](02_08_11.html) if the system works if and only if the fourth component works and at least two of the other components work.
+
+The total number of states remains the same as in Exercise 11. The number of states where the whole system works does change to $\binom{3}{2} + \binom{3}{3} = `r n <- choose(3,2) + choose(3,3); n`$ so the final probability is $\frac{\binom{3}{2} + \binom{3}{3}}{2^4} = \frac{1}{4}$

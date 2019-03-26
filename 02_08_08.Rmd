@@ -1,0 +1,12 @@
+---
+title: "Exercise 2.8.8"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> Suppose that a card is drawn at random from a deck of 52, the card is replaced, and then another card is drawn at random. What is the probability of getting two kings?
+
+Ther probability of getting a king on both tries is $\frac{4}{52}$ (because of the replacement) so the final probability is $\frac{4}{52} \cdot \frac{4}{52} = \frac{1}{169}$ 

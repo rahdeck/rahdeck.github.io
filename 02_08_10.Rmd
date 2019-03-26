@@ -1,0 +1,12 @@
+---
+title: "Exercise 2.8.10"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> What is the probability that a bit string of length 3, chosen at random, does not have two consecutive 0's?
+
+There is a total of $2^3 = `r n <- 2^3; n`$ outcomes. The number of outcomes with no two consecutive 0's may be calculated e.g as the complement of events with at least two consecutive 0's. Such events may happen in 3 ways (001, 100, 000). Thus the number of events with no two consecutive 0's is $8 - 3 = 5$, giving the final probability of $\frac{5}{8}$
