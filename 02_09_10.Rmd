@@ -1,0 +1,14 @@
+---
+title: "Exercise 2.9.10"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> Calculate the number of different vote totals, using the plurality voting method (see Example 2.25), when there are $m$ candidates and $n$ voters and each voter need not vote.
+
+We will use combinations with replacement here, summing the numbers for $0$ through to $n$ votes:
+
+$$\sum_{i=0}^{n} C^{R}(m, i) = \sum_{i=0}^{n} C(m+i-1, i) = \sum_{i=0}^{n} \binom{m+i-1}{i}$$

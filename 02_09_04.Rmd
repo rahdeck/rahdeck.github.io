@@ -1,0 +1,14 @@
+---
+title: "Exercise 2.9.4"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> In how many ways can we choose eight concert tickets if four concerts are available?
+
+This is an example of combinations with replacement. The total number of ways is thus:
+
+$$C^{R}(4, 8) = C(11, 8) = C(11, 3) = \binom{11}{3} = `r n <- choose(11, 3); n`$$

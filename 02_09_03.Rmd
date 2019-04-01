@@ -1,0 +1,18 @@
+---
+title: "Exercise 2.9.3"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> If replacement is allowed, compute the number of:
+>
+> (a) 7-permutations of a 3-set
+
+$$P^{R}(3, 7) = 3^7 = `r n <- 3^7; n`$$
+
+> (b) 7-combinations of a 4-set
+
+$$C^{R}(4, 7) = C(10, 7) = C(10, 3) = \binom{10}{3} = `r n <- choose(10, 3); n`$$

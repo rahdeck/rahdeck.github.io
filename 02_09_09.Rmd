@@ -1,0 +1,14 @@
+---
+title: "Exercise 2.9.9"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> The United Soccer League in the United States has a shootout if a game is tied at the end of regulation. So there are wins, shootout wins, losses, or shootout losses. How many different 12-game seasons are possible?
+
+There are 4 values for each possible game out of 12 for the total of:
+
+$$P^{R}(4, 12) = 4^{12} = `r n <- 4^12; n`$$

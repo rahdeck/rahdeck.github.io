@@ -1,0 +1,26 @@
+---
+title: "Exercise 2.9.2"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> Check your answers in [Exercise 1](02_09_01.html) by using Equation (2.7) or Theorem 2.3. 
+>
+> a)
+
+$$P^{R}(2, 5) = 2^5 = `r n <- 2^5; n`$$
+
+> b)
+
+$$P^{R}(3, 2) = 3^2 = `r n <- 3^2; n`$$
+
+> c)
+
+$$C^{R}(2, 5) = C(6, 5) = \binom{6}{5} = `r n <- choose(6, 5); n`$$
+
+> d)
+
+$$C^{R}(3, 2) = C(4, 2) = \binom{4}{2} = `r n <- choose(4, 2); n`$$

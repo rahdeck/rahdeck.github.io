@@ -1,0 +1,32 @@
+---
+title: "Exercise 2.9.7"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> How many DNA chains of length 6 have at least one of each base $T$, $C$, $A$, and $G$? Answer this question under the following assumptions:
+>
+> (a) Only the number of bases of a given type matter.
+
+We can think of it as the number of 4-combinations of a 4-set without replacement (because we need at least one of each base) multiplied by a number of 2-combinations of a 4-set with replacement (because the remaining two bases can be of any type):
+
+$$C(4, 4) \cdot C^{R}(4, 2) = \binom{4}{4} \cdot C(5, 2) = \binom{4}{4} \cdot \binom{5}{2} = `r n <- choose(4, 4) * choose(5, 2); n`$$
+
+> (b) Order matters.
+
+We can break it down into two cases, both of which are DNA chains of length 6 with all four bases ($A$, $C$, $G$, $T$) present:
+
+a) the remaining two bases are of the same type. In this case we have only 4 possibilities: $AA$, $CC$, $GG$, $TT$ for the total of:
+
+$$4 \cdot \frac{6!}{3!} = `r n <- 4 * factorial(6)/factorial(3); n`$$
+
+b) the remaining two bases are of different type. In this case there are $\binom{4}{2} = 6$ possibilities, namely: $AC$, $AG$, $AT$, $CG$, $CT$, $GT$, for the total of:
+
+$$6 \cdot \frac{6!}{2!2!} = `r n <- 6 * factorial(6)/(factorial(2)*factorial(2)); n`$$
+
+The final total is the sum of both cases:
+
+$$4 \cdot \frac{6!}{3!} + 6 \cdot \frac{6!}{2!2!} = `r n <- 4 * factorial(6)/factorial(3) + 6 * factorial(6)/(factorial(2)*factorial(2)); n`$$

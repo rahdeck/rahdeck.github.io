@@ -1,0 +1,14 @@
+---
+title: "Exercise 2.9.6"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> Suppose that a codeword of length 8 consists of letters $A$, $B$, or $C$ or digits $0$ or $1$, and cannot start with $1$. How many such codewords are there?
+
+There are 4 choices for the first position (we're excluding $1$) and $5^7 = `r n <- 5^7; n`$ choices for the subsequent positions for the total of:
+
+$$4 \cdot 5^7 = `r n <- 4 * 5^7; n`$$

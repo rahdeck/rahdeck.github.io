@@ -1,0 +1,12 @@
+---
+title: "Exercise 2.9.11"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> Calculate the number of different vote totals, using the cumulative voting method (see Example 2.25), when there are $m$ candidates, $n$ voters, $l$ open seats, and each voter need not vote.
+
+$$\sum_{i=0}^{n \cdot l} C^{R}(m, i)$$

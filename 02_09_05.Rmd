@@ -1,0 +1,14 @@
+---
+title: "Exercise 2.9.5"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> In how many different ways can we choose 12 microwave desserts if 5 different varieties are available?
+
+This is again an example of combinations with replacement. The total number of ways is:
+
+$$C^{R}(5, 12) = C(16, 12) = C(16, 4) = \binom{16}{4} = `r n <- choose(16, 4); n`$$

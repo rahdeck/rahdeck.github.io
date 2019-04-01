@@ -1,0 +1,22 @@
+---
+title: "Exercise 2.9.8"
+---
+
+```{r include=FALSE} 
+knitr::opts_chunk$set(options(scipen = 999))
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+> In an 82-game NHL season, how many different final records are possible:
+>
+> (a) If a team can either win, lose, or overtime lose each game?
+
+This is a case of 82-combinations of a 3-set with replacement. The total number of records is:
+
+$$C^{R}(3, 82) = C(84, 82) = C(84,2) = \binom{84}{2} = `r n <- choose(84,2); n`$$
+
+> (b) If overtime losses are not possible?
+
+Calculation is similar to the one above but from only a 2-set:
+
+$$C^{R}(2, 82) = C(83, 82) = C(83,1) = \binom{83}{1} = `r n <- choose(83,1); n`$$
